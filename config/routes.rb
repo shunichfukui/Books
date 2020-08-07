@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'messages/new'
   root to: "book#index"
+  resources :book do
+    resources :message
+  end
 
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',

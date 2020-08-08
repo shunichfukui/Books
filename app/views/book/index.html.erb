@@ -1,10 +1,56 @@
-<h1>トップページ</h1>
+<html>
+<div class="header"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li >さぁ始めよう <span>let's share</span></li>
+      <li class ="btn5"><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">   カテゴリー   </a></li><br/>
+      <li class ="btn5"><a href="https://www.linkedin.com/in/plavookac/" target="_blank">オススメ</a></li><br/>
+  
+			<% if user_signed_in?%>
+       <li class ="btn5"> <%= "#{current_user.nickname} 様" %></li>
+       <li href="#"class="btn5"></li>
+       <li class ="btn5"> <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+       <li class ="btn5"> <%= link_to "新規登録", new_user_registration_path %></li>
+       <li class ="btn5"> <%= link_to "ログイン", new_user_session_path %></li>
+      <% end %>
 
-<% if user_signed_in?%>
-<%= "#{current_user.nickname} 様" %>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-<% else %> 
-  <h2>ログインしていません</h2>
-  <%= link_to "新規登録", new_user_registration_path %>
-  <%= link_to "ログイン", new_user_session_path %>
-<% end %>
+    </ul>
+  </div>
+  <!doctype html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>template</title>
+<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+</head>
+  <body>
+  
+    <header> 
+           <div  class="header-contents">
+  <div>好きなだけ語ろう</div>
+<p data-item='Books'>Books</p>
+
+<section>
+  <div>Enjoy life with books </div>
+  
+
+</section>
+</div>
+    </header>
+    <div class="main-wrapper">
+<%= render "shared/footer" %>
+    </div><!-- /.main-wrapper -->
+    <footer>
+    
+   </footer>
+   </body>
+
+</html>

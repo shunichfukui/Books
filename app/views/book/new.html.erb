@@ -3,27 +3,28 @@
     <h2>＊画像を投稿！＊</h2>
   </div>
   
- <%= form_with model: @books, method: :post, id: 'new_message', local: true do |f| %>
-  
+<%= form_for @book, url:  book_index_path do |f| %>
+
   <div class="field" type="text">
     <%= f.label :name, "本の名前" %><br />
     <%= f.text_field :name %>
   </div>
 
   <div class="form-input">
+   <div class="text-image-content">
      <%= f.label :content, "説明文" %><br />
   <%= f.text_area :content, placeholder: "話したい内容について、ご自由にお書きください" , rows: "12" %> 
+  </div>
   <br /><br /> 
     <label class="form-image">
       <span class="image-file">画像</span>
-      <%= f.file_field :image, class: 'hidden'%>
-    </label><br />
+      <%= f.file_field :image %>
+    </label>
+    <div class="image-stage", id="image-list"></div>
   </div>
-<br/>
-<br/>
+
   <div class="actions">
     <%= f.submit "投稿する", class: "btn1" %>
-      <div id="image-list"></div>
   </div>
 <% end %>
 </div>

@@ -5,7 +5,7 @@
   text-align: center;
 }
 .sec1title h1 {
-      font-size: 40px;
+  font-size: 40px;
   margin: 25px;
   text-transform: uppercase;
   color: #16F1D4;
@@ -24,8 +24,8 @@ h2 {
 }
 
 .btn1 {
-  margin-top: 24px;/* 使うときは削除 */
-  margin-left: 16px;/* 使うときは削除 */
+  margin-top: 24px;
+  margin-left: 16px;
   position: relative;
   display: inline-block;
   color: #135ce4;

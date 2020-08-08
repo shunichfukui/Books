@@ -14,7 +14,7 @@ if (window.location.pathname === '/book/new') {
       ImageList.appendChild(imageElement)
     }
 
-    document.getElementById('content_image').addEventListener('change', function(e){
+    document.getElementById('book_image').addEventListener('change', function(e){
       
       const imageContent = document.querySelector('img');
       if (imageContent){

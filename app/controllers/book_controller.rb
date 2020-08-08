@@ -19,9 +19,10 @@ class BookController < ApplicationController
   end
 
   def create
-    @book = Book.create(book_params)
+    
+    @books = Book.new(book_params)
 
-    redirect_to root_path if @book.save
+    redirect_to  book_index_path if @books.save
   end
 
   def edit
@@ -37,7 +38,7 @@ class BookController < ApplicationController
   private
 
   def book_params
-    params.permit(:name, :content,:image).merge(user_id: current_user.id)
+    params.require(:book).permit(:name, :content,:image).merge(user_id: current_user.id)
   end
 
 end

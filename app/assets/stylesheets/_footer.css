@@ -67,10 +67,10 @@ height:100%;
 }
 .footer_center{
     width:500px;
-    float:left;
+   display: flex;
   text-align:center;
 }
-.footer h1{
+.footer h2{
     font-family: 'Helvetica';
     font-size: 30px;
     font-weight: 100;

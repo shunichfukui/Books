@@ -3,11 +3,11 @@
     <h1>会員登録</h1>
   </div>
   
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+ <%= form_with model: @book, local: true do |f| %>
+  
   <div class="field" type="text">
-    <%= f.label :nickname, "ニックネーム（半角英数）" %><br />
-    <%= f.text_field :nickname %>
+    <%= f.label :name, "本の名前" %><br />
+    <%= f.text_field :name %>
   </div>
 
   <div class="field">

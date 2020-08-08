@@ -1,0 +1,16 @@
+<div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+    <li >さぁ始めよう <span>let's share</span></li>
+    <% if user_signed_in?%>
+       <li class ="btn5"> <%= "#{current_user.nickname} 様" %></li>
+       <li class ="btn5"> <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li><br/>
+       <li class ="btn5"> <%= link_to "さっそく投稿する！", new_book_path %></li>
+      <% else %>
+       <li class ="btn5"> <%= link_to "新規登録", new_user_registration_path %></li>
+       <li class ="btn5"> <%= link_to "ログイン", new_user_session_path %></li>
+      <% end %>
+      <li class ="btn5"><a href='#' target="_blank"> 一覧</a></li><br/>
+      <li class ="btn5"><a href='#' target="_blank">カテゴリ- </a></li><br/>
+      <li class ="btn5"><a href="#" target="_blank">オススメ</a></li><br/>
+    </ul>
+  </div>

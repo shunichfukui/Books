@@ -15,13 +15,13 @@ class BookController < ApplicationController
 
   def destroy
     @book = Book.find(params[:id])
-    item.destroy
+    book.destroy
   end
 
   def create
-    @book = Book.new(book_params)
+    @book = Book.create(book_params)
 
-    redirect_to root_path if @item.save
+    redirect_to root_path if @book.save
   end
 
   def edit
@@ -37,7 +37,7 @@ class BookController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:name, :content,:image).merge(user_id: current_user.id)
+    params.permit(:name, :content,:image).merge(user_id: current_user.id)
   end
 
 end

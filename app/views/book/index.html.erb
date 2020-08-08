@@ -6,21 +6,7 @@
     <div class="spinner horizontal"></div>
     <div class="spinner diagonal part-2"></div>
   </label>
-  <div id="sidebarMenu">
-    <ul class="sidebarMenuInner">
-    <li >さぁ始めよう <span>let's share</span></li>
-    <% if user_signed_in?%>
-       <li class ="btn5"> <%= "#{current_user.nickname} 様" %></li>
-       <li class ="btn5"> <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li><br/>
-       <li class ="btn5"> <%= link_to "さっそく投稿する！", new_user_registration_path %></li>
-      <% else %>
-       <li class ="btn5"> <%= link_to "新規登録", new_user_registration_path %></li>
-       <li class ="btn5"> <%= link_to "ログイン", new_user_session_path %></li>
-      <% end %>
-      <li class ="btn5"><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">カテゴリ- </a></li><br/>
-      <li class ="btn5"><a href="https://www.linkedin.com/in/plavookac/" target="_blank">オススメ</a></li><br/>
-    </ul>
-  </div>
+  <%= render "shared/sidebar" %>
   <!doctype html>
 <head>
 <meta charset="UTF-8">
@@ -32,7 +18,7 @@
   <body>
   
     <header> 
-           <div  class="header-contents">
+<div  class="header-contents">
   <div>好きなだけ語ろう</div>
 <p data-item='Books'>Books</p>
 
@@ -40,8 +26,9 @@
   <div>Enjoy life with books </div>
   
 
-</section>
+   </section>
 </div>
+
     </header>
     <div class="main-wrapper">
 <%= render "shared/footer" %>

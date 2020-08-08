@@ -11,6 +11,14 @@
   color: #16F1D4;
   font-weight: 400;
 }
+h2 {
+  font-size: 40px;
+  margin: 25px;
+  text-transform: uppercase;
+  color: #800080;
+  font-weight: 400;
+}
+
 .field{
   margin: 10px;
 }

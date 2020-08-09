@@ -13,27 +13,40 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="x-ua-compatible" content="IE=edge">
 <title>template</title>
-<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+<%# <link href="../../_common/css/style.css" rel="stylesheet" type="text/css"> %>
 </head>
   <body>
-  
-    <header> 
+<header> 
 <div  class="header-contents">
   <div class="welcon-message">好きなだけ語ろう</div>
 <p data-item='Books'>Books</p>
-
 <section>
   <div class="welcon-message">Enjoy life with books </div>
-  
-
    </section>
 </div>
 <div class="item-row">
+ <% @books.each do |book|%>
+ <% if book.present?%>
+    <ul class="swiper-container">
+     	<li> <h3 class="item-name"><%= book.genre.type %></h3></li>
+    	<li> <h2 class="item-name"><%= book.name %></h2></li>
+	    <li><%= image_tag book.image , id: 'slideshow' if book.image.attached?%></li>
+	    <li> <%= link_to "/books/#{book.id}" do %></li>
+      <% end %>
+    </ul>
+    <%end%>
+  <% end %>
+  <br/>
+</div>
+<br/>
+<div class="recomend">
 <a class="welcon-message">あなたもシェアしませんか？</a>
 <a class="welcon-message">Would you like to share?<a>
-<a href="book/new" class="fancy-button pop-onhover bg-gradient1">
+<a href="books/new" class="fancy-button pop-onhover bg-gradient1">
 <span>Post A Book</span></a>
 </div>
+<br/>
+
     </header>
     <div class="main-wrapper">
 <%= render "shared/footer" %>

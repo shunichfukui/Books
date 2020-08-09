@@ -1,15 +1,15 @@
-class BookController < ApplicationController
+class BooksController < ApplicationController
   def new
     @book = Book.new
   end
 
   def index
-    @Books = Book.all
+   @books =Book.all
   end
 
   def show
     @book = Book.find(params[:id])
-    @message = Message.new
+   
     # @item = Item.includes(:user,:item_purchase)
   end
 
@@ -20,9 +20,9 @@ class BookController < ApplicationController
 
   def create
     
-    @books = Book.new(book_params)
+    @book = Book.new(book_params)
 
-    redirect_to  book_index_path if @books.save
+    redirect_to  books_path if @book.save
   end
 
   def edit
@@ -38,7 +38,7 @@ class BookController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:name, :content,:image).merge(user_id: current_user.id)
+    params.require(:book).permit(:name, :content,:genre_id,:image).merge(user_id: current_user.id)
   end
 
 end

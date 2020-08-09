@@ -1,4 +1,4 @@
-if (window.location.pathname === '/book/new') {
+if (window.location.pathname === '/books/new') {
   document.addEventListener('DOMContentLoaded', function(){
     const ImageList = document.getElementById('image-list')
 

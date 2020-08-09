@@ -31,7 +31,7 @@
      	<li> <h3 class="item-name"><%= book.genre.type %></h3></li>
     	<li> <h2 class="item-name"><%= book.name %></h2></li>
 	    <li><%= image_tag book.image , id: 'slideshow' if book.image.attached?%></li>
-	    <li> <%= link_to "/book/#{book.id}" do %></li>
+	    <li> <%= link_to "/books/#{book.id}" do %></li>
       <% end %>
     </ul>
     <%end%>
@@ -42,7 +42,7 @@
 <div class="recomend">
 <a class="welcon-message">あなたもシェアしませんか？</a>
 <a class="welcon-message">Would you like to share?<a>
-<a href="book/new" class="fancy-button pop-onhover bg-gradient1">
+<a href="books/new" class="fancy-button pop-onhover bg-gradient1">
 <span>Post A Book</span></a>
 </div>
 <br/>

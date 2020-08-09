@@ -1,4 +1,4 @@
-class BookController < ApplicationController
+class BooksController < ApplicationController
   def new
     @book = Book.new
   end
@@ -22,7 +22,7 @@ class BookController < ApplicationController
     
     @book = Book.new(book_params)
 
-    redirect_to  book_index_path if @book.save
+    redirect_to  books_path if @book.save
   end
 
   def edit

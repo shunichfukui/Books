@@ -26,13 +26,15 @@
 </div>
 <div class="item-row">
  <% @books.each do |book|%>
+ <% if book.present?%>
     <ul class="swiper-container">
+     	<li> <h3 class="item-name"><%= book.genre.type %></h3></li>
     	<li> <h2 class="item-name"><%= book.name %></h2></li>
 	    <li><%= image_tag book.image , id: 'slideshow' if book.image.attached?%></li>
 	    <li> <%= link_to "/book/#{book.id}" do %></li>
       <% end %>
-
     </ul>
+    <%end%>
   <% end %>
   <br/>
 </div>

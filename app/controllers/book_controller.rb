@@ -38,7 +38,7 @@ class BookController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:name, :content,:image).merge(user_id: current_user.id)
+    params.require(:book).permit(:name, :content,:genre_id,:image).merge(user_id: current_user.id)
   end
 
 end

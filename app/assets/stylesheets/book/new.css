@@ -5,3 +5,9 @@
     justify-content: center;
     margin: 20vh;
 }
+.genre{
+  padding-bottom: 5vh;
+}
+.select-box{
+  padding: 7px;
+}

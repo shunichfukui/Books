@@ -4,12 +4,12 @@ class BookController < ApplicationController
   end
 
   def index
-    @Books = Book.all
+   @books =Book.all
   end
 
   def show
     @book = Book.find(params[:id])
-    @message = Message.new
+   
     # @item = Item.includes(:user,:item_purchase)
   end
 
@@ -20,9 +20,9 @@ class BookController < ApplicationController
 
   def create
     
-    @books = Book.new(book_params)
+    @book = Book.new(book_params)
 
-    redirect_to  book_index_path if @books.save
+    redirect_to  book_index_path if @book.save
   end
 
   def edit

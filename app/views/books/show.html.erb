@@ -1,0 +1,40 @@
+<body><div class="container">
+<div class="sec1title">
+    <div class="item-show">
+          <h2 class='border01'>
+            <%= @book.genre.type %>
+          </h2>
+        <%= image_tag @book.image, id: 'slideshow' if @book.image.attached? %>
+         </div>
+        <div class="item-info" >
+          <h2 id ='item-name'>
+            <%= @book.name %>
+          </h2>
+            <form class="item-content-show">
+            <%= @book.content %>
+            </form>
+          </div>
+        </div>
+      </div>
+     <br />
+    </div>
+  </div>
+  
+ </div>
+ <div class="container">
+          <a href="" class="bnt-massage">
+          you wanna chat?
+          <span>enjoy♪</span>
+          </a>
+ </div>
+ 
+ </body>
+ <div id="item-button-show">
+     <% if user_signed_in?  && current_user.id == @book.user_id%>
+      <i class="button3">  <%= link_to '商品の編集する', "/books/#{@book.id}/edit", method: :get, class: "item-color-btn" %></i>
+   <i class="button3">      <%= link_to '削除する', "/books/#{@book.id}", method: :delete,  class: "item-color-btn"%></i>
+   <i class="button3">    <%= link_to 'メッセージ画面に行く！', "/books/#{@book.id}", method: :get, class: "item-color-btn" %></i>
+     <% else %>
+    <i class="button3"> <%= link_to 'メッセージ画面に行く！', "/books/#{@book.id}", method: :get %></i>
+    <% end%>
+   </div>

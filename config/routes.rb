@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
   root to: "books#index"
-  resources :books
+  resources :books do
+    resources :rooms do
+      resources :messages
+    end
+  end
 
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',

@@ -78,25 +78,103 @@
 .bnt-massage:hover span {
   transform: translateY(50px);
 }
-.button3 {
-  width:  20px;
-  height: 10vh;
-  font-size: 20px;
-  padding: 10px;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  background-color: #FFF	;
-  border-radius: 45px;
-  transition: all 1s ease 0s;
-  }
 
-.button3:hover {
-  background-color: #2EE59D;
-  color: #000000;
-}
 #item-button-show{
   display: block;
   position: relative;
   font-size: small;
   margin: 0 10vw 10vh;
+}
+.message-new{
+  display: block;
+  position: relative;
+  font-size: small;
+  margin: 0 10vw 10vh;
+}
+.container2 {
+  font-family: "Yu Gothic", YuGothic, Verdana, 'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  text-align: center;
+  padding-top: 40px;
+  font-size: x-large;
+  margin-left: 15px;
+}
+.btn-open {
+  display: inline-block;
+  width: 180px;
+  height:50px;
+  text-align: center;
+  background-color: #9ec34b;
+  font-size: 16px;
+  line-height: 52px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #9ec34b;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-open:after{
+  width: 100%;
+  height: 0;
+  content:"";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background : #FFF;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transition: .2s;
+  z-index: -1;
+}
+.btn-open:hover{
+  color: #9ec34b;
+}
+.btn-open:hover:after{
+  height: 240%;
+  opacity: 1;
+}
+.btn-open:active:after{
+  height: 340%;
+  opacity: 1;
+}
+.btn-open2 {
+  display: inline-block;
+  width: 180px;
+  height:50px;
+  text-align: center;
+  background-color: #d9385f;
+  font-size: 16px;
+  line-height: 52px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #d9385f;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-open2:after{
+  width: 100%;
+  height: 0;
+  content:"";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background : #FFF;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transition: .2s;
+  z-index: -1;
+}
+.btn-open2:hover{
+  color: #d9385f;
+}
+.btn-open2:hover:after{
+  height: 240%;
+  opacity: 1;
+}
+.btn-open2:active:after{
+  height: 340%;
+  opacity: 1;
 }

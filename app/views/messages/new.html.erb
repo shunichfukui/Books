@@ -1,0 +1,24 @@
+<h1 class = "top-messsage"><%="#{@book.name}"%></h1>
+
+<div id='messages'>
+  <% @messages.reverse_each do |message| %>
+  <div class = "message-head">
+   <div class = "message-text">
+    <p><%= message.text %></p>
+    </div>
+   <div class="message-box">
+      <%= message.user.nickname%>
+      <p> <%= message.created_at%></p>
+    </div>
+   <% end %>
+  </div>
+  <div class="box">
+    <%= form_with(model: [@book, @message], local: true) do |f| %>
+     <%= f.text_field :text, id: "message_text" %>
+     <%= f.submit '送信' %>
+    <% end %>
+
+    
+     <%= link_to '戻る', "/", class: "finish-btn" %></li> 
+ </div>
+</div>

@@ -33,8 +33,8 @@
      <% if user_signed_in?  && current_user.id == @book.user_id%>
       <i class="button3">  <%= link_to '商品の編集する', "/books/#{@book.id}/edit", method: :get, class: "item-color-btn" %></i>
    <i class="button3">      <%= link_to '削除する', "/books/#{@book.id}", method: :delete,  class: "item-color-btn"%></i>
-   <i class="button3">    <%= link_to 'メッセージ画面に行く！', "/books/#{@book.id}", method: :get, class: "item-color-btn" %></i>
+   <i class="button3">    <%= link_to 'メッセージ画面に行く！', " /books/#{@book.id}/rooms/new", method: :get, class: "item-color-btn" %></i>
      <% else %>
-    <i class="button3"> <%= link_to 'メッセージ画面に行く！', "/books/#{@book.id}", method: :get %></i>
+    <i class="button3"> <%= link_to 'メッセージ画面に行く！', " /books/#{@book.id}/rooms/new", method: :get %></i>
     <% end%>
    </div>

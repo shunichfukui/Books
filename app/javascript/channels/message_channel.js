@@ -13,8 +13,7 @@ consumer.subscriptions.create("MessageChannel", {
     const html = `<p>${data.js_content.text}</p>`;
     const messages = document.getElementById('messages');
     const newMessage = document.getElementById('message_text');
-    console.log(data)
-    messages.innerHTML('afterbegin', html);
+    messages.insertAdjacentHTML('afterbegin', html);
     newMessage.value='';
     // Called when there's incoming data on the websocket for this channel
   }

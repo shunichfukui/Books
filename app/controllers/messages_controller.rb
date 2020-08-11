@@ -8,8 +8,7 @@ class MessagesController < ApplicationController
 
   def create
     @book = Book.find(params[:book_id])
-    @message = @book.message
-    @message = @messages.new(message_params)
+    @message = @book.build_message(message_params)
     if @message.save!
     ActionCable.server.broadcast 'message_channel', js_content: @message
     # redirect_to "/books/#{@book.id}/messages/new"
@@ -18,6 +17,6 @@ class MessagesController < ApplicationController
 
   private 
  def message_params
-  params.require(:message).permit(:text).merge( book_id: params[:book_id])
+  params.require(:message).permit(:text).merge(user_id: current_user.id)
  end
 end

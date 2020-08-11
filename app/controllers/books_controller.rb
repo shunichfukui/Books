@@ -9,19 +9,16 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
-   
-    # @item = Item.includes(:user,:item_purchase)
   end
 
   def destroy
-    @book = Book.find(params[:id])
+    book = Book.find(params[:id])
     book.destroy
+    redirect_to  books_path 
   end
 
   def create
-    
     @book = Book.new(book_params)
-
     redirect_to  books_path if @book.save
   end
 
@@ -38,7 +35,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:name, :content,:genre_id,:image).merge(user_id: current_user.id)
+    params.require(:book).permit(:name, :content,:genre_id,:image,:message).merge(user_id: current_user.id)
   end
 
 end

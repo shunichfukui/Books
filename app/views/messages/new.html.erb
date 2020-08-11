@@ -1,24 +1,29 @@
+ 
+ <li class="btn-open4"> <button  onclick ="alertFunction1()"> today </button> </li>
+    <script>
+        function alertFunction1() {
+        const myDate = new Date();
+         alert( myDate );
+        }
+</script>
 <h1 class = "top-messsage"><%="#{@book.name}"%></h1>
 
-<div id='messages'>
   <% @messages.reverse_each do |message| %>
   <div class = "message-head">
-   <div class = "message-text">
+   <div id='messages'>
     <p><%= message.text %></p>
-    </div>
-   <div class="message-box">
-      <%= message.user.nickname%>
+   
+       <%= message.user.nickname%>
       <p> <%= message.created_at%></p>
-    </div>
-   <% end %>
   </div>
-  <div class="box">
-    <%= form_with(model: [@book, @message], local: true) do |f| %>
+   <% end %>
+</div>
+  <div class="box-new">
+    <%= form_with model: @message, url: book_messages_path,local: true do |f| %>
      <%= f.text_field :text, id: "message_text" %>
      <%= f.submit '送信' %>
     <% end %>
-
-    
-     <%= link_to '戻る', "/", class: "finish-btn" %></li> 
- </div>
-</div>
+     <div class="message-new">
+   <i class="container2">  <%= link_to 'home', "/", class: "btn-open3" %></i>
+   </div>
+  </div>

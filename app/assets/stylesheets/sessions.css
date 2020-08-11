@@ -150,3 +150,12 @@ h6 {
   background:#3b5998;
   box-shadow:0px 3px 0px #2c416e;
 }
+.edit-user{
+  margin-bottom: 20vh;
+}
+.edut-user-link {
+  align-items: center;
+  justify-content: center;
+  margin: 5vh;
+  font-size: xx-large;
+}

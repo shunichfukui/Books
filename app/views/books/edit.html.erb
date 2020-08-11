@@ -1,0 +1,34 @@
+<body><div class="container">
+<div class="sec1title">
+    <h2>＊画像を投稿！＊</h2>
+  </div>
+  
+<%= form_for (@book)  do |f| %>
+
+  <div class="field" type="text">
+    <%= f.label :name, "本の名前" %><br />
+    <%= f.text_field :name %>
+  </div>
+   <div class="genre" >
+    <%= f.label :genre_id, "本のジャンル" %><br />
+    <%= f.collection_select(:genre_id,Genre.all,:id,:type,{prompt: "---"},{class:"select-box"}) %>
+  </div>
+  <div class="form-input">
+   <div class="text-image-content">
+     <%= f.label :content, "説明文" %><br />
+  <%= f.text_area :content, placeholder: "話したい内容について、ご自由にお書きください" , rows: "12" %> 
+  </div>
+  <br /><br /> 
+    <label class="form-image">
+      <span class="image-file">画像</span>
+      <%= f.file_field :image %>
+    </label>
+    <div class="image-stage", id="image-list"></div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "更新", class: "btn1" %>
+  </div>
+<% end %>
+</div>
+</body>

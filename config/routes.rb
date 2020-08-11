@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root to: "books#index"
   resources :books do
-    resources :messages
+    resources :messages,only: [:create, :new,:index,:show]
   end
 
   devise_for :users, controllers: {

@@ -1,16 +1,16 @@
 <body><div class="container">
      <div class ="tag_set">
-       <%@book.tags.each do |tag| %>
-         <%= " # #{tag.tag_name}"%>
-       <%end%>
-      </div>
+    <%@book.tags.each do |tag| %>
+             #<%= tag.tag_name%>
+           <%end%>
+
 <div class="sec1title">
     <div class="item-show">
           <h2 class='border01'>
             <%= @book.genre.type %>
           </h2>
         <%= image_tag @book.image, id: 'slideshow' if @book.image.attached? %>
-         </div>
+        
         <div class="item-info" >
           <h2 id ='item-name'>
             <%= @book.name %>
@@ -18,9 +18,7 @@
             <form class="item-content-show">
             <%= @book.content %>
             </form>
-          </div>
         </div>
-      </div>
      <br />
     </div>
   </div>

@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root to: "books#index"
   resources :books do
     resources :messages,only: [:create, :new,:index,:show]
-    
+    collection do
+      get 'search'
+    end
   end
 
   devise_for :users, controllers: {

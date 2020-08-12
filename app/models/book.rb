@@ -3,6 +3,8 @@ class Book < ApplicationRecord
   belongs_to_active_hash :genre
   belongs_to :user
   has_one :message, dependent: :destroy
+  has_many :tag_relations, dependent: :destroy
+  has_many :tags, through: :tag_relations, dependent: :destroy
   has_one_attached :image
   validates :content, presence: true, unless: :was_attached?
 

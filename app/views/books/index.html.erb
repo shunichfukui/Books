@@ -1,14 +1,24 @@
 <html>
 <div class="header"></div>
   <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  
   <label for="openSidebarMenu" class="sidebarIconToggle">
+  
     <div class="spinner diagonal part-1"></div>
     <div class="spinner horizontal"></div>
     <div class="spinner diagonal part-2"></div>
   </label>
   <%= render "shared/sidebar" %>
+ 
   <!doctype html>
 <head>
+<%= search_form_for @p, url: search_books_path do |f| %>
+    <%= f.label :name_cont, '商品名' %>
+    <%= f.search_field :name_cont, placeholder: "本の名前で検索" %>
+    <br>
+    <%= f.submit '検索' %>
+<% end %>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="x-ua-compatible" content="IE=edge">
@@ -24,17 +34,8 @@
    </section>
 </div>
 <div class="item-row">
- <% @books.each do |book|%>
- <% if book.present?%>
-    <ul id="swiper-container">
-     	<li> <h3 class="item-name"><%= book.genre.type %></h3></li>
-    	<li> <h2 class="item-name"><%= book.name %></h2></li>
-       <%= link_to "/books/#{book.id}" do %>
-	    <li><%= image_tag book.image , id: 'slideshow' if book.image.attached?%></li>
-      <% end %>
-    </ul>
-    <%end%>
-  <% end %>
+   <%= render "book" %>
+   
   <br/>
 </div>
 <br/>

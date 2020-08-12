@@ -1,0 +1,38 @@
+ 
+   <h1 class="search-forms">
+     検索結果
+   </h1>
+<head class ="search-book-list">
+  <div class="book-chosen">
+   <% if @results.length !=0 %>    
+    <% @results.each do |result| %>
+     <br>
+     <div class="sec1title">
+    <div class="item-show">
+          <h2 class='border01'>
+            <%= result.genre.type %>
+             <%# <%= link_to "/books/#{@book.id}" do %> 
+        <%# <%end%> 
+          </h2>
+        <%= image_tag result.image, id: 'slideshow' if result.image.attached? %>
+        <div class="item-info" >
+          <h2 id ='item-name'>
+            <%= result.name %>
+          </h2>
+            <form class="item-content-show">
+            <%= result.content %>
+            </form>
+        </div>
+        <br />
+       </div>
+     </div>
+    <% end %>
+   <% else %>
+   該当する商品はありません
+   <% end %>
+   <br>
+  </div>
+  <div class="top-button">
+    <%= link_to 'トップページへ戻る', root_path, class: "btn-open2" %>
+  </div>
+ </head>

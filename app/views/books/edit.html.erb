@@ -9,6 +9,7 @@
     <%= f.label :name, "本の名前" %><br />
     <%= f.text_field :name %>
   </div>
+  
    <div class="genre" >
     <%= f.label :genre_id, "本のジャンル" %><br />
     <%= f.collection_select(:genre_id,Genre.all,:id,:type,{prompt: "---"},{class:"select-box"}) %>

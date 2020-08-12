@@ -1,12 +1,11 @@
 if (window.location.pathname === '/books/new') {
   document.addEventListener('DOMContentLoaded', function(){
-    const ImageList = document.getElementById('image-list')
+    const ImageList = document.getElementById('sbox9')
 
    
     const createImageHTML = (blob) => {
       const imageElement = document.createElement('div')
-
-      
+ 
       const blobImage = document.createElement('img')
       blobImage.setAttribute('src', blob)
     
@@ -14,8 +13,7 @@ if (window.location.pathname === '/books/new') {
       ImageList.appendChild(imageElement)
     }
 
-    document.getElementById('book_image').addEventListener('change', function(e){
-      
+    document.getElementById('books_tag_image').addEventListener('change', function(e){
       const imageContent = document.querySelector('img');
       if (imageContent){
         imageContent.remove();

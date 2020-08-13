@@ -2,11 +2,12 @@ Rails.application.routes.draw do
 
   root to: "books#index"
   post '/books/rooms' => 'books#index'
+  post '/books/rooms/messages' => 'messages#new'
 
   resources :books do
-    resources :rooms, only: [:new, :create,:index]
-    resources :messages,only: [:create, :new,:index,:show]
-
+    resources :rooms, only: [:new, :create,:index] do
+     resources :messages,only: [:create, :new,:index,:show]
+    end
     collection do
       get 'search'
     end

@@ -17,7 +17,7 @@
    <% end %>
 </div>
   <div class="box-new">
-      <%= form_with(model: [@book, @message],url: "/books/#{@book.id}/messages", local: true) do |f| %>
+      <%= form_with(model: [@book,@room, @message],url: "/books/#{@book.id}/messages", local: true) do |f| %>
      <%= f.text_field :text, id: "message_text" %>
      <%= f.submit '送信' %>
     <% end %>

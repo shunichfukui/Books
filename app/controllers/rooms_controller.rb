@@ -7,13 +7,15 @@ class RoomsController < ApplicationController
     @room = Room.new(room_params)
     @book = Book.find(params[:book_id])
     if @room.save
-      redirect_to  "/books/#{@book.id}/rooms"
+      redirect_to  root_path
     else
       render :new
     end
   end
   def index
     @room= Room.all
+    @book =Book.find(params[:book_id])
+    @message = Message.new
   end
 
   private

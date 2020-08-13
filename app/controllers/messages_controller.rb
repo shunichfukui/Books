@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
-  
+  def index
+    @room =Room.all
+  end
 
   def new
     @book = Book.find(params[:book_id])

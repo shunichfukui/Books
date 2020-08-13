@@ -1,3 +1,9 @@
- <h1 class="search-forms">
-     検索結果
-   </h1>
+<div class="rooms">
+  <% current_user.rooms.each do |room| %>
+    <div class="room">
+      <div class="room-name">
+        <a href="#"><%= @room.field%></a>
+      </div>
+    </div>
+  <% end %>
+</div>

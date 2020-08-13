@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
   root to: "books#index"
+  post '/books/rooms' => 'books#index'
+
   resources :books do
+    resources :rooms, only: [:new, :create,:index]
     resources :messages,only: [:create, :new,:index,:show]
+
     collection do
       get 'search'
     end

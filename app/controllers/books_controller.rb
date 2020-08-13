@@ -6,7 +6,8 @@ class BooksController < ApplicationController
   end
 
   def index
-   @books =Book.all.order(created_at: :desc)
+   @books =Book.all
+   @bok =Book.includes(:room,:user).all
    set_book_column 
   end
 
@@ -20,9 +21,7 @@ class BooksController < ApplicationController
     redirect_to  books_path 
   end
 
-  def create
-    # @book = Book.new(book_params)
-   
+  def create   
     @book = BooksTag.new(book_tag_params)
     if @book.valid?
       @book.save

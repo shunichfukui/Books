@@ -12,5 +12,8 @@
       <% end %>
       <li class ="btn5"><a href='#' target="_blank">お気に入り </a></li><br/>
       <li class ="btn5"><a href="#" target="_blank">人気順</a></li><br/>
+       <% if @book.present?%>
+      <li class ="btn5"> <%= link_to @room.field, book_room_messages_path(room) %></li>
+      <% end%>
     </ul>
   </div>

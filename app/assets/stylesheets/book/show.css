@@ -12,12 +12,12 @@
   display: flex;
   justify-content: center;
   font-family: monospace; 
-  width: 93%;
+  width: 97%;
   border-right: .08em solid;
   overflow: hidden;
-  font-size: 4em;
+  font-size: 100px;
   white-space: nowrap;
-  animation: typing 2s steps(11, end), caret .5s ;
+  animation: typing 1.5s steps(11, end), caret .5s ;
 }
 .border01 {
   color: #000000;

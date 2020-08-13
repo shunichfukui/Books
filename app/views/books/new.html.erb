@@ -2,7 +2,6 @@
 <div class="sec1title">
     <h2>＊画像を投稿！＊</h2>
   </div>
-  
 <%= form_for @book, url:  books_path do |f| %>
 
   <div class="field" type="text">
@@ -29,7 +28,6 @@
     </label>
     <div class="image-stage", id="image-list"></div>
   </div>
-
   <div class="actions">
     <%= f.submit "投稿する", class: "btn1" %>
   </div>

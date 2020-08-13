@@ -1,0 +1,13 @@
+<div class="rooms">
+  <% current_user.rooms.each do |room| %>
+    <div class="room">
+      <div class="room-name">
+        <%= link_to room.field, "/books/#{@book.id}/rooms/#{@room.ids}/messages/new" %>
+      </div>
+    </div>
+  <% end %>
+   <%= form_with  model:[@item, @room,@message],url: "/books/#{@book.id}/rooms/#{@room.ids}/messages/new", method: :get,local: true do |form| %>
+       <%= form.text_field :text, id: "message_text" %>
+       <%= form.submit '投稿する' %>
+      <% end %>
+</div>

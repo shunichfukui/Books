@@ -6,8 +6,8 @@ class BooksController < ApplicationController
   end
 
   def index
-   @books =Book.all.order(created_at: :desc)
-   @rooms = Room.all.includes(:book)
+   @books =Book.all
+   @bok =Book.includes(:room,:user).all
    set_book_column 
   end
 

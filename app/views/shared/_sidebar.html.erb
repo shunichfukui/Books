@@ -12,8 +12,8 @@
       <% end %>
       <li class ="btn5"><a href='#' target="_blank">お気に入り </a></li><br/>
       <li class ="btn5"><a href="#" target="_blank">人気順</a></li><br/>
-       <% if @room_id.present?%>
-      <li class ="btn5"> <%= link_to "#{@room.field}", new_user_session_path %></li>
+       <% if @book.present?%>
+      <li class ="btn5"> <%= link_to "チャットルーム", "/books/#{@book.id}/rooms/#{@room.ids}/messages" %></li>
       <% end%>
     </ul>
   </div>

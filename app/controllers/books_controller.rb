@@ -7,7 +7,8 @@ class BooksController < ApplicationController
 
   def index
    @books =Book.all
-   @bok =Book.includes(:room,:user).all
+   @book =Book.includes(:room,:user)
+   @room = @book.includes(:room)
    set_book_column 
   end
 
@@ -57,6 +58,6 @@ class BooksController < ApplicationController
     @p = Book.ransack(params[:q]) 
   end
   def set_book_column
-    @book_name = Book.select("tag_name").distinct 
+    @book_name = Book.select("name").distinct 
    end
 end

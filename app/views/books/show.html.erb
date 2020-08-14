@@ -1,3 +1,11 @@
+ <i class="btn-open4"> <button  onclick ="alertFunction1()"> today </button> </i>
+    <script>
+        function alertFunction1() {
+        const myDate = new Date();
+         alert( myDate );
+        }
+    </script>
+
 <body><div class="container">
      <div class ="tag_set">
     <%@book.tags.each do |tag| %>
@@ -23,21 +31,25 @@
     </div>
   </div>
   
- </div>
- <div class="container">
+  </div>
+  <div class="container">
           <a href="/books/new" class="bnt-massage">
           you wanna create?
           <span>enjoy ♪</span>
           </a>
  </div>
- 
  </body>
- <div id="item-button-show">
+
+ <%# ボタン領域 %>
+
+ <div>
      <% if user_signed_in?  && current_user.id == @book.user_id%>
-      <i class="container2">  <%= link_to '編集する', "/books/#{@book.id}/edit", method: :get, class: "btn-open" %></i>
-   <i class="container2">      <%= link_to '削除する', "/books/#{@book.id}", method: :delete,  class: "btn-open"%></i>
+   <i class="container2"><%= link_to '編集する', "/books/#{@book.id}/edit", method: :get, class: "btn-open" %></i>
+   <i class="container2"> <%= link_to '削除する', "/books/#{@book.id}", method: :delete,  class: "btn-open",name: "button-delete"%></i>
      <% end %>   
   </div>
+    <% if user_signed_in?  && current_user.id != @book.user_id%>
   <div class="message-new">
     <i class="container2">  <%= link_to 'メッセージを送る！', "/books/#{@book.id}/rooms/new", method: :get, class: "btn-open2" %></i>
+     <% end %>  
   </div>

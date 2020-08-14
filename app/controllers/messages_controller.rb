@@ -1,15 +1,20 @@
 class MessagesController < ApplicationController
   def index
-    @room =Room.find(params[:room_id])
     @book = Book.find(params[:book_id])
-    @message =Message.all
+    @messages =Message.all.includes(:room)
+   
+
+
+      ActionCable.server.broadcast 'message_channel', js_content: @message
+      
   end
 
   def new
-    @room = Room.find(params[:room_id])
     @book = Book.find(params[:book_id])
-    @messages = Message.all
-    @message = Message.new
+    @messages =Message.all.includes(:room)
+    @message = @book.message
+      ActionCable.server.broadcast 'message_channel', js_content: @message
+      
   end
 
   def create

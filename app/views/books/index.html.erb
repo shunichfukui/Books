@@ -8,21 +8,26 @@
     <div class="spinner horizontal"></div>
     <div class="spinner diagonal part-2"></div>
   </label>
+
+  <%# ドロワー %>
+
   <%= render "shared/sidebar" %>
+
+ <%# ドロワー %>
  
   <!doctype html>
 <head>
+<%# 検索 %>
 <%= search_form_for @p, url: search_books_path do |f| %>
     <%= f.label :name_cont, '商品名' %>
     <%= f.search_field :name_cont, placeholder: "本の名前で検索" %>
     <br>
     <%= f.submit '検索' %>
 <% end %>
-
+<%# 検索 %>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="x-ua-compatible" content="IE=edge">
-<title>template</title>
 </head>
   <body>
 <header> 
@@ -34,8 +39,11 @@
    </section>
 </div>
 <div class="item-row">
+
+<%# 商品 %>
    <%= render "book" %>
-   
+<%# 商品 %>
+
   <br/>
 </div>
 <br/>
@@ -49,8 +57,14 @@
 
     </header>
     <div class="main-wrapper">
+
+<%# フッター %>
+
 <%= render "shared/footer" %>
-    </div><!-- /.main-wrapper -->
+
+<%# フッター %>
+
+    </div>
     <footer>
     
    </footer>

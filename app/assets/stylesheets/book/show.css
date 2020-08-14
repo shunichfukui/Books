@@ -79,12 +79,6 @@
   transform: translateY(50px);
 }
 
-#item-button-show{
-  display: block;
-  position: relative;
-  font-size: small;
-  margin: 0 10vw 10vh;
-}
 .message-new{
   display: block;
   position: relative;

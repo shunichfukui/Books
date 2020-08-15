@@ -38,8 +38,10 @@ ActiveRecord::Schema.define(version: 2021_08_10_072111) do
     t.string "content"
     t.integer "genre_id", null: false
     t.bigint "user_id"
+    t.bigint "tag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["tag_id"], name: "index_books_on_tag_id"
     t.index ["user_id"], name: "index_books_on_user_id"
   end
 
@@ -111,6 +113,7 @@ ActiveRecord::Schema.define(version: 2021_08_10_072111) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "books", "tags"
   add_foreign_key "books", "users"
   add_foreign_key "messages", "books"
   add_foreign_key "messages", "rooms"

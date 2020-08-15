@@ -1,6 +1,6 @@
 <div class='chat-room-form'>
   <h1>新規チャットルーム</h1>
-  <%= form_with(model: @room,url: "/books/#{@book.id}/rooms", local: true) do |f| %>
+  <%= form_with(model: @room,url: new_book_room_message_path(@book.id,@room.id) , local: true) do |f| %>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
         <%= f.label :field, class: 'chat-room-form__label'%>

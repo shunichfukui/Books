@@ -1,7 +1,7 @@
-<body><div class="container">
-<div class="sec1title">
-    <h2>＊画像を投稿！＊</h2>
-  </div>
+　<body><div class="container">
+　　<div class="sec1title">
+   　 <h2>＊画像を投稿！＊</h2>
+  　</div>
 <%= form_for @book, url:  books_path do |f| %>
 
   <div class="field" type="text">
@@ -32,5 +32,9 @@
     <%= f.submit "投稿する", class: "btn1" %>
   </div>
 <% end %>
+
+<%# ホームボタン %>
+  <%= render "shared/sidebar" %>
+
 </div>
 </body>

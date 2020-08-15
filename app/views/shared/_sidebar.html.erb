@@ -11,10 +11,9 @@
        <li class ="btn5"> <%= link_to "ログイン", new_user_session_path %></li>
       <% end %>
       <li class ="btn5"><a href='#' target="_blank">お気に入り </a></li><br/>
-      <li class ="btn5"><a href="#" target="_blank">人気順</a></li><br/>
-       <%# <% if @room.present?%> %>
+      <li class ="btn5"><%= link_to "タグ検索！", tags_index_path  %></li><br/>
+       <% if @room.present? %> 
       <li class ="btn5"><%= link_to "ロームで会話する？",  new_book_room_message_path(@book.ids,@room.ids) %></li><br/>
-      <%# <li class ="btn5"> <%= link_to "#{@room}", book_room_messages_path(@room)%></li>  %>
-      <%# <% end%> %>
+      <% end %>
     </ul>
   </div>

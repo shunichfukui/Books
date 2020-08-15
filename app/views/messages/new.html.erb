@@ -15,7 +15,6 @@
      <%= f.text_field :text, id: "message_text" %>
      <%= f.submit '送信' %>
     <% end %>
-     <div class="message-new">
-   <i class="container2">  <%= link_to 'home', "/", class: "btn-open3" %></i>
-   </div>
+    <%# ホームボタン %>
+      <%= render "shared/sidebar" %>
   </div>

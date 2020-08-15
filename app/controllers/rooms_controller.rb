@@ -7,7 +7,7 @@ class RoomsController < ApplicationController
     @room = Room.new(room_params)
     @book = Book.find(params[:book_id])
     if @room.save
-      redirect_to  root_path
+      redirect_to  new_book_room_message_path(@book.ids,@room.ids) 
     else
       render :new
     end

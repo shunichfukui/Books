@@ -28,11 +28,14 @@
     <% end %>
    <% else %>
    該当する商品はありません
+
+   <%=link_to  "ホームへ戻る",root_path%>
+
    <% end %>
    <br>
   </div>
+  
+<%# ホームボタン %>
+   <%= render "shared/sidebar" %>
 
-  <div class="top-button">
-    <%= link_to 'トップページへ戻る', root_path, class: "btn-open2" %>
-  </div>
  </head>

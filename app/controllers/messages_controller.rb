@@ -3,8 +3,6 @@ class MessagesController < ApplicationController
     @book = Book.find(params[:book_id])
     @messages =Message.all.includes(:room)
    
-
-
       ActionCable.server.broadcast 'message_channel', js_content: @message
       
   end
@@ -23,7 +21,7 @@ class MessagesController < ApplicationController
     @message = @book.build_message(message_params)
     if @message.save!
     ActionCable.server.broadcast 'message_channel', js_content: @message
-    redirect_to " /books/#{@book.id}/rooms/#{@room.id}/messages"
+    redirect_to  new_book_room_message_path(@book.id,@room.id)
     end
   end
 

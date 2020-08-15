@@ -1,5 +1,13 @@
 require 'rails_helper'
+describe Room, type: :model do
+  before do
+    @room = FactoryBot.build(:room)
+  end
 
-RSpec.describe Room, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'ルーム機能' do
+    
+    it "fieldが空だと登録できない" do
+      @room.errors[:field]
+    end
+  end
 end

@@ -219,10 +219,15 @@
   background-color: #9999FF;
   font-size: 16px;
   line-height: 52px;
- 
 }
 .tag_set{
   padding-top: 10vh;
   font-size: 20px;
   margin-left: 20vw;
+}
+.favorite-button{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 7vh;
 }

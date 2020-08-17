@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :rooms, only: [:new, :create,:index] do
      resources :messages,only: [:create, :new,:index,:show]
     end
+    resources :favorites,only:[:create,:destroy]
     collection do
       get 'search'
     end

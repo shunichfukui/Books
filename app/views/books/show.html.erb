@@ -22,17 +22,34 @@
             <form class="item-content-show">
             <%= @book.content %>
             <div  class ="tag_set">
-            <%@book.tags.each do |tag| %>
-             #<%= tag.tag_name%>
+           
+             #<%= @book.tag_name%>
              </div>
-           <%end%>
             </form>
         </div>
      <br />
     </div>
   </div>
-  
   </div>
+  
+<%# ボタン領域 %>
+<div id="favorites_buttons_<%= @book.id %>">
+          </div>
+  <div class="favorite-button">
+ <% if user_signed_in? %>
+    <% if @book.favorited_by?(current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
+        <button><span>お気に入り解除: </span><%=link_to @book.favorites.count, book_favorites_path(@book.id), method: :delete, remote: true %></button>
+    <% else %>
+        <button><span>お気に入り登録: </span><%=link_to @book.favorites.count, book_favorites_path(@book.id), method: :post , remote: true%></button>
+    <% end %>
+  <% else %>
+    <button><span>お気に入り数: </span><%= @book.favorites.count %></button>
+  <% end %>
+</div>
+ <div>
+
+ <br/>
+
   <div class="container">
           <a href="/books/new" class="bnt-massage">
           you wanna create?
@@ -41,9 +58,6 @@
  </div>
  </body>
 
- <%# ボタン領域 %>
-
- <div>
      <% if user_signed_in?  && current_user.id == @book.user_id%>
    <i class="container2"><%= link_to '編集する', "/books/#{@book.id}/edit", method: :get, class: "btn-open" %></i>
    <i class="container2"> <%= link_to '削除する', "/books/#{@book.id}", method: :delete,  class: "btn-open",name: "button-delete"%></i>

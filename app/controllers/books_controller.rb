@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :search_book, only: [:index, :search]
 
   def new
-    @book = BooksTag.new
+    @book = Book.new
   end
 
   def index
@@ -14,6 +14,7 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    @room = @book.room
   end
 
   def destroy
@@ -23,7 +24,7 @@ class BooksController < ApplicationController
   end
 
   def create   
-    @book = BooksTag.new(book_tag_params)
+    @book = Book.new(book_params)
     if @book.valid?
       @book.save
       redirect_to root_path
@@ -46,18 +47,14 @@ class BooksController < ApplicationController
   end
 
   private
-
-  def book_tag_params
-    params.require(:books_tag).permit(:name, :content,:genre_id,:image,:tag_name).merge(user_id: current_user.id)
-  end
   def book_params
-    params.require(:book).permit(:name, :content,:genre_id,:image).merge(user_id: current_user.id)
+    params.require(:book).permit(:name, :content,:genre_id,:image,:tag_name).merge(user_id: current_user.id)
   end
 
   def search_book
     @p = Book.ransack(params[:q]) 
   end
   def set_book_column
-    @book_name = Book.select("name").distinct 
+    @book_name = Book.select("tag_name").distinct 
    end
 end

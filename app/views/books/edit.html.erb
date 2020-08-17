@@ -5,6 +5,10 @@
   
 <%= form_for (@book)  do |f| %>
 
+ <div class="tag-field", id='tag-field'>
+     <%= f.label :tag_name, "タグ" %>
+     <%= f.text_field :tag_name, placeholder: "検索されやすいキーワードを入れましょう" %>
+   </div>
   <div class="field" type="text">
     <%= f.label :name, "本の名前" %><br />
     <%= f.text_field :name %>

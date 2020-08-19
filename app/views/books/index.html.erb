@@ -11,20 +11,49 @@
 
   <%# ドロワー %>
 
-  <%= render "shared/sidebar" %>
+ <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+    <li >さぁ始めよう <span>let's share</span></li>
+    <% if user_signed_in?%>
+       <li class ="btn5"> <%= "#{current_user.nickname} 様" %></li>
+        <li class ="btn5"> <%= link_to "マイページ",  edit_user_registration_path %></li><br/>
+       <li class ="btn5"> <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li><br/>
+       <li class ="btn5"> <%= link_to "さっそく投稿する！", new_book_path %></li>
+      <% else %>
+       <li class ="btn5"> <%= link_to "新規登録", new_user_registration_path %></li>
+       <li class ="btn5"> <%= link_to "ログイン", new_user_session_path %></li>
+      <% end %>
+      <li class ="btn5"><a href='https://www.amazon.co.jp/?&tag=hydraamazonav-22&ref=pd_sl_7ibq2d37on_e&adgrpid=56100363354&hvpone=&hvptwo=&hvadid=289260145877&hvpos=&hvnetw=g&hvrand=10706569882367220041&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009303&hvtargid=kwd-10573980&hydadcr=27922_11415158&gclid=Cj0KCQjwsuP5BRCoARIsAPtX_wFSyXiDy0d3nSZ5SuyV4FvL990TiGOp8xGwFIL6FTVG-G5TKNMX-n8aAojSEALw_wcB' target="_blank">Amazonで探す？ </a></li><br/>
+       <% if @room.present? %> 
+      <li class ="btn5"><%= link_to "ロームで会話する？",  new_book_room_message_path(@book.ids,@room.ids) %></li><br/>
+      <% end %>
+      <br/>
+      <br/>
+      <li > <h3 id="introduce">
+        Booksとは
+       </h3></li> 
+       <li> <i id="introduce-text">
+        好きな本について理解を深めたり、好きな本について語りあうためのアプリです。
+       </i></li> 
+    </ul>
+  </div>
 
  <%# ドロワー %>
  
   <!doctype html>
 <head>
+
 <%# 検索 %>
+
 <%= search_form_for @p, url: search_books_path do |f| %>
-    <%= f.label :tag_name_cont, '商品名' %>
-    <%= f.text_field  :tag_name_cont, placeholder: "本の名前で検索" %>
+    <%= f.label :tag_name_cont, 'タグ名' %>
+    <%= f.text_field  :tag_name_cont, placeholder: "タグの名前で検索" %>
     <br>
     <%= f.submit '検索' %>
 <% end %>
+
 <%# 検索 %>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="x-ua-compatible" content="IE=edge">
@@ -40,21 +69,22 @@
 </div>
 <div class="item-row">
 
-<%# 商品 %>
+<%# 本 %>
    <%= render "book" %>
-<%# 商品 %>
+<%# 本 %>
 
   <br/>
 </div>
 <br/>
 <div class="recomend">
-<a class="welcon-message">あなたもシェアしませんか？</a>
-<a class="welcon-message">Would you like to share?<a>
-<a href="books/new" class="fancy-button pop-onhover bg-gradient1">
+<i class="welcon-message">あなたもシェアしませんか？</i>
+<i class="welcon-message">Would you like to share?<i>
+<i href="books/new" class="fancy-button pop-onhover bg-gradient1">
 <span>Post A Book</span></a>
 </div>
 <br/>
-
+ 
+<br/>
     </header>
     <div class="main-wrapper">
 

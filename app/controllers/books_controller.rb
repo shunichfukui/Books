@@ -34,7 +34,7 @@ class BooksController < ApplicationController
   end
   def search
     @results = @p.result
-   
+    @book = @results.includes(:book)
   end
   def edit
     @book = Book.find(params[:id])

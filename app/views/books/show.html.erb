@@ -1,11 +1,3 @@
- <i class="btn-open4"> <button  onclick ="alertFunction1()"> today </button> </i>
-    <script>
-        function alertFunction1() {
-        const myDate = new Date();
-         alert( myDate );
-        }
-    </script>
-
 <body><div class="container">
     
 <div class="sec1title">
@@ -65,10 +57,18 @@
   </div>
     <% if user_signed_in?  && current_user.id != @book.user_id%>
   <div class="message-new">
-    <i class="container2">  <%= link_to 'メッセージを送る！', "/books/#{@book.id}/rooms/new", method: :get, class: "btn-open2" %></i>
+    <i class="container2">  <%= link_to 'メッセージを見る？', "books/#{@book.id}/messages/new", class: "btn-open2" %></i>
      <% end %>  
-<br/>
-<br/>
+<div class="comment-box">
+   <div>
+      <%= form_with  model:[@book, @message], method: :post,local: true do |form| %>
+       <%= form.text_field :text, id: "message_text" %>
+       <%= form.submit '投稿する' %>
+      <% end %>
+      <div id="messages"></div>
+   <div> 
+ </div>
+</div>
 <br/>
 <br/>
 <%# ホームボタン %>

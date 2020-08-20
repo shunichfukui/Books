@@ -10,7 +10,7 @@
    <% end %>
 </div>
   <div class="box-new">
-      <%= form_with model: [@book,@room, @message],url: new_book_room_message_path(@book.id,@room.id), local: true do |f| %>
+      <%= form_with model: [@book, @message],url: book_messages_path(@book.id), local: true do |f| %>
      <%= f.text_field :text, id: "message_text" %>
      <%= f.submit '送信' %>
     <% end %>

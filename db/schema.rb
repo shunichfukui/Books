@@ -53,31 +53,12 @@ ActiveRecord::Schema.define(version: 2021_08_10_072112) do
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text"
-    t.bigint "room_id"
     t.bigint "book_id"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["book_id"], name: "index_messages_on_book_id"
-    t.index ["room_id"], name: "index_messages_on_room_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
-  end
-
-  create_table "room_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "room_id"
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["room_id"], name: "index_room_users_on_room_id"
-    t.index ["user_id"], name: "index_room_users_on_user_id"
-  end
-
-  create_table "rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "book_id"
-    t.string "field"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["book_id"], name: "index_rooms_on_book_id"
   end
 
   create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -106,10 +87,6 @@ ActiveRecord::Schema.define(version: 2021_08_10_072112) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "books", "users"
   add_foreign_key "messages", "books"
-  add_foreign_key "messages", "rooms"
   add_foreign_key "messages", "users"
-  add_foreign_key "room_users", "rooms"
-  add_foreign_key "room_users", "users"
-  add_foreign_key "rooms", "books"
   add_foreign_key "sns_credentials", "users"
 end

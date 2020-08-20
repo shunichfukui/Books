@@ -7,14 +7,14 @@ class BooksController < ApplicationController
 
   def index
    @books =Book.all
-   @book =Book.includes(:room,:user)
-   @room = @book.includes(:room)
+   @book =Book.includes(:user)
    set_book_column 
   end
 
   def show
     @book = Book.find(params[:id])
-    @room = @book.room
+    @message = Message.new
+
   end
 
   def destroy

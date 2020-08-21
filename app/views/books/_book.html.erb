@@ -1,6 +1,8 @@
+<%# 本の情報 %>
+<div id="swiper-container">
 <% @books.each do |book|%>
  <% if book.present?%>
-    <ul id="swiper-container">
+    <ul>
      	<li> <h3 class="item-name"><%= book.genre.type %></h3></li>
     	<li> <h2 class="item-name"><%= book.name %></h2></li>
        <%= link_to "/books/#{book.id}" do %>
@@ -9,3 +11,4 @@
     </ul>
     <%end%>
   <% end %>
+</div>

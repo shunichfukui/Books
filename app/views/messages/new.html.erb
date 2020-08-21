@@ -1,27 +1,23 @@
- <li class="btn-open4"> <button  onclick ="alertFunction1()"> today </button> </li>
-    <script>
-        function alertFunction1() {
-        const myDate = new Date();
-         alert( myDate );
-        }
-</script>
- <h1 class = "top-messsage"><%="#{@book.name}"%></h1>
 
-  <% @messages.reverse_each do |message| %>
+ <h1 class = "top-messsage"><%="#{@book.name}"%></h1>
+<% @book.messages.order(created_at: :DESC).each do |message| %>
   <div class = "message-head">
-   <div id='messages'>
-    <i><%= message.text %></i>
-   
+   <form id='messages'>
+   <div class="message-content">
+    <%= message.text %>
+    <i class="message-text">
        <%= message.user.nickname%>
-  </div>
-   <% end %>
+    </i>
+   </div>
+  </form>
+   <%end%>
+
 </div>
   <div class="box-new">
-      <%= form_with(model: [@book,@room, @message],url: "/books/#{@book.id}/messages", local: true) do |f| %>
+      <%= form_with model: [@book, @message],url: "/books/#{@book.id}/messages", local: true do |f| %>
      <%= f.text_field :text, id: "message_text" %>
      <%= f.submit '送信' %>
     <% end %>
-     <div class="message-new">
-   <i class="container2">  <%= link_to 'home', "/", class: "btn-open3" %></i>
-   </div>
+    <%# ホームボタン %>
+<%= render "shared/home" %>
   </div>

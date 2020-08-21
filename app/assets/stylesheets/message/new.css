@@ -5,3 +5,11 @@
 .box-new{
   margin-top: 30vh;
 }
+.message-content{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: large;
+}
+.message-text{
+  font-size: small;
+}

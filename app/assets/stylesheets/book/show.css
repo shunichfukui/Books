@@ -24,12 +24,11 @@
 }
 .item-content-show{
   background:#fff;
-  font-size: x-large;
+  font-size: xx-large;
   border-radius:6px;
-  padding:20px;
   padding:37px;
   width:50vw;
-  margin:50px auto;
+  margin:70px auto;
   box-shadow:15px 15px 5px rgba(0,0,0,.1);
 }
 .bnt-massage {
@@ -79,12 +78,6 @@
   transform: translateY(50px);
 }
 
-#item-button-show{
-  display: block;
-  position: relative;
-  font-size: small;
-  margin: 0 10vw 10vh;
-}
 .message-new{
   display: block;
   position: relative;
@@ -226,9 +219,15 @@
   background-color: #9999FF;
   font-size: 16px;
   line-height: 52px;
- 
 }
 .tag_set{
-  font-size: 30px;
-
+  padding-top: 10vh;
+  font-size: 20px;
+  margin-left: 20vw;
+}
+.favorite-button{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 7vh;
 }

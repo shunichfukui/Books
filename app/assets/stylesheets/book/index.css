@@ -225,7 +225,12 @@ h1:first-letter {
     width:290px;
     height:380px;
 }
-.recomend{
+
+
+/* #swiper-container{
     display: flex;
-    flex-direction: column;
-}
+    flex-wrap: wrap;
+    margin-left: 10vw;
+    padding: 5vw;
+    text-decoration-style: none !important;
+} */

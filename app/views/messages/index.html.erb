@@ -1,0 +1,19 @@
+ <h1 class = "top-messsage"><%="#{@book.name}"%></h1>
+
+  <% @messages.reverse_each do |message| %>
+  <div class = "message-head">
+   <div id='messages'>
+    <i><%= message.text %></i>
+   
+       <%= message.user.nickname%>
+  </div>
+   <% end %>
+</div>
+  <div class="box-new">
+      <%= form_with model: [@book, @message],url: book_messages_path(@book.id), local: true do |f| %>
+     <%= f.text_field :text, id: "message_text" %>
+     <%= f.submit '送信' %>
+    <% end %>
+    <%# ホームボタン %>
+       <%= render "shared/sidebar" %>
+  </div>

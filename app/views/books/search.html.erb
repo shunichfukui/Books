@@ -1,4 +1,3 @@
- 
    <h1 class="search-forms">
      検索結果
    </h1>
@@ -11,8 +10,8 @@
     <div class="item-show">
           <h2 class='border01'>
             <%= result.genre.type %>
-             <%# <%= link_to "/books/#{@book.id}" do %> 
-        <%# <%end%> 
+             <%= link_to "/books/#{result.id}" do %>
+        <%end %>
           </h2>
         <%= image_tag result.image, id: 'slideshow' if result.image.attached? %>
         <div class="item-info" >
@@ -28,11 +27,18 @@
      </div>
     <% end %>
    <% else %>
+    <br/>
    該当する商品はありません
+   <br/>
+   <br/>
+<div>
+   <%=link_to  "ホームへ戻る",root_path%>
+</div>
    <% end %>
    <br>
   </div>
-  <div class="top-button">
-    <%= link_to 'トップページへ戻る', root_path, class: "btn-open2" %>
-  </div>
+  
+<%# ホームボタン %>
+   <%= render "shared/sidebar" %>
+
  </head>

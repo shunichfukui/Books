@@ -2,6 +2,7 @@ class Book < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :genre
   belongs_to :user
+  has_many :users, through: :favorites
   has_many :favorites 
   has_many :messages, dependent: :destroy
   has_one_attached :image

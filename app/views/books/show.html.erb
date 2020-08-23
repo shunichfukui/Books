@@ -25,20 +25,10 @@
   </div>
   
 <%# ボタン領域 %>
-<div id="favorites_buttons_<%= @book.id %>">
-          </div>
-  <div class="favorite-button">
- <% if user_signed_in? %>
-    <% if @book.favorited_by?(current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
-        <button><span>お気に入り解除: </span><%=link_to @book.favorites.count, book_favorites_path(@book.id), method: :delete, remote: true %></button>
-    <% else %>
-        <button><span>お気に入り登録: </span><%=link_to @book.favorites.count, book_favorites_path(@book.id), method: :post , remote: true%></button>
-    <% end %>
-  <% else %>
-    <button><span>お気に入り数: </span><%= @book.favorites.count %></button>
-  <% end %>
+
+ <div id="favorites_buttons_<%= @book.id %>">
+  <%= render partial: 'favorites/favorite', locals: { book: @book } %>
 </div>
- <div>
 
  <br/>
 
@@ -47,7 +37,7 @@
           you wanna create?
           <span>enjoy ♪</span>
           </a>
- </div>
+  </div>
  </body>
 
      <% if user_signed_in?  && current_user.id == @book.user_id%>

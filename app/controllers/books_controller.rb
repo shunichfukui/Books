@@ -7,6 +7,7 @@ class BooksController < ApplicationController
 
   def index
    @books =Book.all
+   @books = Book.page(params[:page]).per(1).order('updated_at DESC')
    @book =Book.includes(:user)
    set_book_column 
   end

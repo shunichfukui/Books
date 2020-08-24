@@ -1,15 +1,19 @@
 <%# 本の情報 %>
-<div id="swiper-container">
-<% @books.each do |book|%>
- <% if book.present?%>
-    <ul>
-     	<li> <h3 class="item-name"><%= book.genre.type %></h3></li>
-    	<li> <h2 class="item-name"><%= book.name %></h2></li>
-       <%= link_to "/books/#{book.id}" do %>
-	    <li><%= image_tag book.image , id: 'slideshow' if book.image.attached?%></li>
-      <% end %>
-    </ul>
-    <%end%>
-  <% end %>
-  <%= paginate @books %>
-</div>
+  <div>
+    <% @books.each do |book|%>
+     <% if book.present?%>
+      <tr>
+        <td> <h3 class="item-name"><%= book.genre.type %></h3></td>
+        <td> <h2 class="item-name"><%= book.name %></h2></td>
+        <%= link_to "/books/#{book.id}" do %>
+        <td><%= image_tag book.image , id: 'slideshow' if book.image.attached?%></td>
+        <% end %>
+      </tr>
+     <%end%>
+    <% end %>
+   </div>
+   <div id="page">
+     <%=paginate @books %>
+   </div>
+    
+

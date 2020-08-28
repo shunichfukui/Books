@@ -5,7 +5,6 @@ class FavoritesController < ApplicationController
     # buildはnewと同じ意味で、アソシエーションしながらインスタンスをnewする時に形式的に使われる。
     @book = Book.find(params[:book_id])
     @favorite = current_user.favorites.build(book_id: params[:book_id])
-    @favorite = favorites.find_by(book_id: book.id)
     @favorite.save
     redirect_to books_path
   end

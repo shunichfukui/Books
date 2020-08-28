@@ -59,10 +59,12 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'ransack'
+gem 'kaminari'
 gem 'active_hash'
 gem "pry-rails"
 gem 'rails-i18n'
 gem 'mini_magick'
+gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'image_processing', '~> 1.2'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'

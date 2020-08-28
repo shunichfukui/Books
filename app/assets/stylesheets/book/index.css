@@ -224,4 +224,9 @@ h1:first-letter {
 #slideshow{
     width:290px;
     height:380px;
+
 }
+#page{
+    justify-content: center;
+}
+

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post 'books/messages'
   resources :books do
     resources :messages,only: [:create, :new,:index,:show]
-    resource :favorites, only: [:create, :destroy]   
+    resource :favorites, only: [:create, :destroy,:index  ]
     collection do
       get 'search'
     end

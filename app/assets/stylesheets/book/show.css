@@ -85,7 +85,6 @@
   margin: 0 10vw 10vh;
 }
 .container2 {
-  font-family: "Yu Gothic", YuGothic, Verdana, 'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
   text-align: center;
   padding-top: 40px;
   font-size: x-large;
@@ -229,5 +228,6 @@
   display: flex;
   align-content: center;
   justify-content: center;
-  margin-bottom: 7vh;
+  width: 10%;
+  margin-left: 45%;
 }

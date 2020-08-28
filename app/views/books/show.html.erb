@@ -14,7 +14,6 @@
             <form class="item-content-show">
             <%= @book.content %>
             <div  class ="tag_set">
-           
              #<%= @book.tag_name%>
              </div>
             </form>
@@ -26,8 +25,11 @@
   
 <%# ボタン領域 %>
 
+
  <div id="favorites_buttons_<%= @book.id %>">
   <%= render partial: 'favorites/favorite', locals: { book: @book } %>
+
+
 </div>
 
  <br/>

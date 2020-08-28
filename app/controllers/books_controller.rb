@@ -15,7 +15,7 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
     @message = Message.new
-
+    @favorite = Favorite.new
   end
 
   def destroy

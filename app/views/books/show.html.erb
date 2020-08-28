@@ -24,10 +24,13 @@
   </div>
   
 <%# ボタン領域 %>
-<div id="favorites_buttons_<%= @book.id %>">
- <%= render partial: 'favorites/favorite', locals: { book: @book } %>
+
+
+ <div id="favorites_buttons_<%= @book.id %>">
+  <%= render partial: 'favorites/favorite', locals: { book: @book } %>
+
+
 </div>
- <div>
 
  <br/>
 
@@ -36,7 +39,7 @@
           you wanna create?
           <span>enjoy ♪</span>
           </a>
- </div>
+  </div>
  </body>
 
      <% if user_signed_in?  && current_user.id == @book.user_id%>

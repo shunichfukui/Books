@@ -1,4 +1,4 @@
-
+<%# メッセージ一覧 %>
  <h1 class = "top-messsage"><%="#{@book.name}"%></h1>
 <% @book.messages.order(created_at: :DESC).each do |message| %>
   <div class = "message-head">
@@ -11,7 +11,7 @@
    </div>
   </form>
    <%end%>
-
+<%# メッセージ一覧 %>
 </div>
   <div class="box-new">
       <%= form_with model: [@book, @message],url: "/books/#{@book.id}/messages", local: true do |f| %>

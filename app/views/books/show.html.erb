@@ -1,5 +1,5 @@
 <body><div class="container">
-    
+    <%# 商品情報 %>
 <div class="sec1title">
     <div class="item-show">
           <h2 class='border01'>
@@ -28,8 +28,6 @@
 
  <div id="favorites_buttons_<%= @book.id %>">
   <%= render partial: 'favorites/favorite', locals: { book: @book } %>
-
-
 </div>
 
  <br/>
@@ -51,7 +49,7 @@
   <div class="message-new">
     <i class="container2">  <%= link_to 'メッセージを見る？', "books/#{@book.id}/messages/new", class: "btn-open2" %></i>
      <% end %>  
-<div class="comment-box">
+ <div class="comment-box">
    <div>
       <%= form_with  model:[@book, @message], method: :post,local: true do |form| %>
        <%= form.text_field :text, id: "message_text" %>

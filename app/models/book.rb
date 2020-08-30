@@ -6,7 +6,7 @@ class Book < ApplicationRecord
   has_many :favorites 
   has_many :messages, dependent: :destroy
   has_one_attached :image
-  validates :content, presence: true, unless: :was_attached?
+  
 
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?

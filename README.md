@@ -62,6 +62,8 @@ URL https://github.com/shunichfukui/Books.git
 ・チャットボット
 目的　バグ対応
 
+・お気に入り機能
+目的　評価のため
 
 
 実装した機能についてのGIFと説明
@@ -88,15 +90,19 @@ https://gyazo.com/f4c742159727ddc7b48ed36ba45451e3
 ・スライドショー
 https://gyazo.com/b1ee2a16cf9421d6830efdcd535987e6
 
-その他機能
-・アマゾン移行
-・簡易チャットボット
 ・プレビュー機能
 https://gyazo.com/6b0e3656e7693b1bb81a5dd2ccbe4617
 
+・お気に入り機能
+https://gyazo.com/6f337384f5982cb6b4632aa6dd658dc7
+
+その他機能?
+・アマゾン移行
+・簡易チャットボット
+
+
 実装予定の機能
 
-・お気に入り機能
 ・アマゾン、楽天APIを用いた検索機能
 
 

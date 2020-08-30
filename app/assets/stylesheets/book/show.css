@@ -231,9 +231,12 @@
 .comment-box{
   margin-top:5vh;
 }
+.container5{
+  margin-bottom:10vh;
+}
 .like{
   margin-top:5vh;
   position: relative !important;
   object-fit: cover!important;
-  width: 170%!important;
+  width: 150%!important;
 }

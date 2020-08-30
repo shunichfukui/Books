@@ -34,12 +34,6 @@
 <%# ボタン領域 %>
 
 
-  <div class="container5">
-          <a href="/books/new" class="bnt-massage">
-          you wanna create?
-          <span>enjoy ♪</span>
-          </a>
-   </div>
 
  <%# 編集、削除 %>
    <div class="option">
@@ -56,10 +50,17 @@
         <% end %>
         <div id="messages"></div>
     <div> 
+    <%# ホームボタン %>
+    <%= render "shared/home" %>
+      <div class="container5">
+          <a href="/books/new" class="bnt-massage">
+          you wanna create new book?
+          <span>enjoy ♪</span>
+          </a>
+   </div>
  </div>
 </div>
  <%# 編集、削除 %>
-<%# ホームボタン %>
-<%= render "shared/home" %>
+
  </html class="text-center">
  

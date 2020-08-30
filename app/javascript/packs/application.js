@@ -13,7 +13,7 @@ require('./preview')
 require("../tag")
 
 
-require('../button')
+
 
 //= require rails-ujs 
 //= require turbolinks

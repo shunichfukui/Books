@@ -30,6 +30,10 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
+  <div class="field">
+   <%= f.label :birthday, "誕生日" %><br />
+   <%= f.date_select :birthday, start_year: 1950, end_year: 2019 %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Update" %>

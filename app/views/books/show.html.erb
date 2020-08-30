@@ -1,67 +1,65 @@
-<body><div class="container">
-    <%# 商品情報 %>
-<div class="sec1title">
-    <div class="item-show">
-          <h2 class='border01'>
-            <%= @book.genre.type %>
-          </h2>
-        <%= image_tag @book.image, id: 'slideshow' if @book.image.attached? %>
-        
-        <div class="item-info" >
-          <h2 id ='item-name'>
-            <%= @book.name %>
-          </h2>
-            <form class="item-content-show">
-            <%= @book.content %>
-            <div  class ="tag_set">
-             #<%= @book.tag_name%>
-             </div>
-            </form>
+       <div class="like">
+        <%# いいね %>
+          <div id="favorites_buttons_<%= @book.id %>">
+            <%= render partial: 'favorites/favorite', locals: { book: @book } %>
+          </div>
+        <%# いいね %>
         </div>
-     <br />
+<html>
+    <%# 商品情報 %>
+  <div class="sec1title">
+      <div class="item-show">
+            <h2 class='border01'>
+              <%= @book.genre.type %>
+              
+            </h2>
+          <%= image_tag @book.image, id: 'slideshow' if @book.image.attached? %>
+          
+          <div class="item-info" >
+            <h2 id ='item-name'>
+              <%= @book.name %>
+            </h2>
+              <form class="item-content-show">
+              <%= @book.content %>
+              <div  class ="tag_set">
+              #<%= @book.tag_name%>
+              </div>
+              </form>
+          </div>
+      <br />
+      </div>
     </div>
-  </div>
-  </div>
-  
+    </div>
+    
 <%# ボタン領域 %>
 
 
- <div id="favorites_buttons_<%= @book.id %>">
-  <%= render partial: 'favorites/favorite', locals: { book: @book } %>
-</div>
-
- <br/>
-
-  <div class="container">
+  <div class="container5">
           <a href="/books/new" class="bnt-massage">
           you wanna create?
           <span>enjoy ♪</span>
           </a>
-  </div>
- </body>
+   </div>
 
+ <%# 編集、削除 %>
+   <div class="option">
      <% if user_signed_in?  && current_user.id == @book.user_id%>
-   <i class="container2"><%= link_to '編集する', "/books/#{@book.id}/edit", method: :get, class: "btn-open" %></i>
-   <i class="container2"> <%= link_to '削除する', "/books/#{@book.id}", method: :delete,  class: "btn-open",name: "button-delete"%></i>
+      <i class="container2"><%= link_to '編集する', "/books/#{@book.id}/edit", method: :get, class: "btn-open" %></i>
+      <i class="container2"> <%= link_to '削除する', "/books/#{@book.id}", method: :delete,  class: "btn-open",name: "button-delete"%></i>
      <% end %>   
-  </div>
-    <% if user_signed_in?  && current_user.id != @book.user_id%>
-  <div class="message-new">
-    <i class="container2">  <%= link_to 'メッセージを見る？', "books/#{@book.id}/messages/new", class: "btn-open2" %></i>
-     <% end %>  
+   </div>
  <div class="comment-box">
-   <div>
-      <%= form_with  model:[@book, @message], method: :post,local: true do |form| %>
-       <%= form.text_field :text, id: "message_text" %>
-       <%= form.submit '投稿する' %>
-      <% end %>
-      <div id="messages"></div>
-   <div> 
+    <div>
+        <%= form_with  model:[@book, @message], method: :post,local: true do |form| %>
+        <%= form.text_field :text, id: "message_text" %>
+        <%= form.submit '投稿する' %>
+        <% end %>
+        <div id="messages"></div>
+    <div> 
  </div>
 </div>
-<br/>
-<br/>
+ <%# 編集、削除 %>
 <%# ホームボタン %>
 <%= render "shared/home" %>
-
-  </div>
+ </html class="text-center">
+ 

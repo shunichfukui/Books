@@ -5,7 +5,7 @@ class User < ApplicationRecord
   :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
   # , dependent: :destroy
          has_many :sns_credentials
-         has_many :books, dependent: :destroy
+         has_many :books
          has_many :messages
          has_many :favorites 
          has_many :favorite_books, through: :favorites, source: :book  
@@ -16,7 +16,7 @@ class User < ApplicationRecord
           favorite = favorites.find_by(book_id: book.id)
           favorite.destroy if favorite
         end
-         validates :nickname, :birthday ,presence: true
+         validates :nickname ,presence: true
          def self.from_omniauth(auth)
           sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
           user = User.where(email: auth.info.email).first_or_initialize(

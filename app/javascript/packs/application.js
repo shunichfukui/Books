@@ -10,7 +10,6 @@ require("channels")
 require('jquery')
 require('../fadeIn')
 require('./preview')
-require("../tag")
 
 
 

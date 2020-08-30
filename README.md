@@ -20,11 +20,14 @@
 是非この機会にご活用ください。
 
 
-URL https://github.com/shunichfukui/Books.git
+URL https://books-28291.herokuapp.com/
 
 
 テスト用アカウント
 
+ニックネーム　サンプル
+メールアドレス　sanple@gmail.com
+パスワード 11111a
 
 
 利用方法
@@ -95,6 +98,7 @@ https://gyazo.com/6b0e3656e7693b1bb81a5dd2ccbe4617
 
 ・お気に入り機能
 https://gyazo.com/6f337384f5982cb6b4632aa6dd658dc7
+
 
 その他機能?
 ・アマゾン移行

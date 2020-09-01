@@ -9,13 +9,7 @@ class User < ApplicationRecord
          has_many :messages
          has_many :favorites 
          has_many :favorite_books, through: :favorites, source: :book  
-         def like(book)
-          favorites.find_or_create_by(book_id: book.id)
-        end
-        def unlike(book)
-          favorite = favorites.find_by(book_id: book.id)
-          favorite.destroy if favorite
-        end
+        
          validates :nickname ,presence: true
          def self.from_omniauth(auth)
           sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create

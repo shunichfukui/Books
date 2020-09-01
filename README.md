@@ -122,6 +122,9 @@ https://gyazo.com/c8a124a73143ed4edee782dda9d653e5
 % git clone https://github.com/shunichfukui/Books.git
 
 
+Qiitaにて機能実装のための説明しています。
+https://qiita.com/shunichfukui
+
 
 環境
 Ruby  6.0.0

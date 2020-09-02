@@ -2,16 +2,13 @@ class MessagesController < ApplicationController
   def new
     @book = Book.find(params[:book_id])
     @messages =Message.all
-    @message = @book.messages
-      ActionCable.server.broadcast 'message_channel', js_content: @message
-      
+    @message = @book.messages      
   end
 
   def create
     @book = Book.find(params[:book_id])
     @message = @book.messages.new(message_params)
     if @message.save!
-    ActionCable.server.broadcast 'message_channel', js_content: @message
     redirect_to  new_book_message_path(@book.id)
     end
   end

@@ -1,98 +1,63 @@
 <html>
-<div class="header"></div>
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-  
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-  
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
-
-  <%# ドロワー %>
-
- <div id="sidebarMenu">
-    <ul class="sidebarMenuInner">
-    <li >さぁ始めよう <span>let's share</span></li>
-    <% if user_signed_in?%>
-       <li class ="btn5"> <%= "#{current_user.nickname} 様" %></li>
-        <li class ="btn5"> <%= link_to "マイページ",  edit_user_registration_path %></li><br/>
-       <li class ="btn5"> <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li><br/>
-       <li class ="btn5"> <%= link_to "さっそく投稿する！", new_book_path %></li>
-      <% else %>
-       <li class ="btn5"> <%= link_to "新規登録", new_user_registration_path %></li>
-       <li class ="btn5"> <%= link_to "ログイン", new_user_session_path %></li>
-      <% end %>
-      <li class ="btn5"><a href='https://www.amazon.co.jp/?&tag=hydraamazonav-22&ref=pd_sl_7ibq2d37on_e&adgrpid=56100363354&hvpone=&hvptwo=&hvadid=289260145877&hvpos=&hvnetw=g&hvrand=10706569882367220041&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009303&hvtargid=kwd-10573980&hydadcr=27922_11415158&gclid=Cj0KCQjwsuP5BRCoARIsAPtX_wFSyXiDy0d3nSZ5SuyV4FvL990TiGOp8xGwFIL6FTVG-G5TKNMX-n8aAojSEALw_wcB' target="_blank">Amazonで探す？ </a></li><br/>
-      <li class ="btn5"><a href='https://bots-3d753.web.app/' target="_blank">管理人に問い合わせる </a></li><br/>
-      <br/>
-      <br/>
-      <li > <h3 id="introduce">
-        Booksとは
-       </h3></li> 
-       <li> <i id="introduce-text">
-        好きな本について理解を深めたり、好きな本について語りあうためのアプリです。
-       </i></li> 
-    </ul>
-  </div>
-
- <%# ドロワー %>
- 
+    <div class="header"></div>
+      <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+      
+      <label for="openSidebarMenu" class="sidebarIconToggle">
+      
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+      </label>
 <head>
+    <%# ドロワー %>
 
-<%# 検索 %>
+    <%= render "shared/footer" %>
 
-<%= search_form_for @p, url: search_books_path do |f| %>
-    <%= f.label :tag_name_cont, 'タグ名' %>
-    <%= f.text_field  :tag_name_cont, placeholder: "タグの名前で検索" %>
-    <br>
-    <%= f.submit '検索' %>
-<% end %>
+    <%# ドロワー %>
 
-<%# 検索 %>
+  <%# 検索 %>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="x-ua-compatible" content="IE=edge">
-</head>
-  <body>
-<header> 
-<div  class="header-contents">
-  <div class="welcon-message">好きなだけ語ろう</div>
-<p data-item='Books'>Books</p>
-<section>
-  <div class="welcon-message">Enjoy life with books </div>
-   </section>
-</div>
-<div class="item-row">
+    <%= search_form_for @p, url: search_books_path do |f| %>
+        <%= f.label :tag_name_cont, 'タグ名' %>
+        <%= f.text_field  :tag_name_cont, placeholder: "タグの名前で検索" %>
+        <br>
+        <%= f.submit '検索' %>
+    <% end %>
 
-<%# 本情報 %>
-   <%= render "book" %>
-<%# 本情報 %>
+  <%# 検索 %>
 
-  <br/>
-</div>
-<br/>
-<div>
-<a href="books/new" class="fancy-button pop-onhover bg-gradient1">
-<span>Post A Book</span></a>
-</div>
-<br/>
- 
-<br/>
-    </header>
-    <div class="main-wrapper">
-
-<%# フッター %>
-
-<%= render "shared/footer" %>
-
-<%# フッター %>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    </head>
+    <body>
+  <header> 
+    <div  class="header-contents">
+      <div class="welcon-message">好きなだけ語ろう</div>
+    <p data-item='Books'>Books</p>
+      <section>
+        <div class="welcon-message">Enjoy life with books </div>
+      </section>
     </div>
-    <footer>
-    
-   </footer>
-   </body>
+
+  <%# 本情報 %>
+    <%= render "book" %>
+  <%# 本情報 %>
+
+    <div>
+    <a href="books/new" class="fancy-button pop-onhover bg-gradient1">
+    <span>Post A Book</span>
+    </a>
+
+        <div class="main-wrapper">
+
+    <%# フッター %>
+
+    <%= render "shared/footer" %>
+
+    <%# フッター %>
+
+        </div>
+    </body>
 
 </html>

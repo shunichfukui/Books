@@ -1,11 +1,12 @@
+<html>  
        <div class="like">
         <%# いいね %>
           <div id="favorites_buttons_<%= @book.id %>">
             <%= render partial: 'favorites/favorite', locals: { book: @book } %>
           </div>
-        <%# いいね %>
         </div>
-<html>
+        <%# いいね %>
+
     <%# 商品情報 %>
   <div class="sec1title">
       <div class="item-show">
@@ -35,14 +36,15 @@
 
 
 
- <%# 編集、削除 %>
+  <%# 編集、削除 %>
    <div class="option">
      <% if user_signed_in?  && current_user.id == @book.user_id%>
       <i class="container2"><%= link_to '編集する', "/books/#{@book.id}/edit", method: :get, class: "btn-open" %></i>
       <i class="container2"> <%= link_to '削除する', "/books/#{@book.id}", method: :delete,  class: "btn-open",name: "button-delete"%></i>
      <% end %>   
    </div>
- <div class="comment-box">
+  <%# 編集、削除 %>
+  <div class="comment-box">
     <div>
         <%= form_with  model:[@book, @message], method: :post,local: true do |form| %>
         <%= form.text_field :text, id: "message_text" %>
@@ -57,10 +59,8 @@
           you wanna create new book?
           <span>enjoy ♪</span>
           </a>
-   </div>
- </div>
-</div>
- <%# 編集、削除 %>
+      </div>
+  </div>
 
  </html class="text-center">
  

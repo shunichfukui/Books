@@ -1,11 +1,11 @@
-<body><div class="container">
-<div class="sec1title">
-    <h2>＊本について編集を加える！＊</h2>
-  </div>
+<html>
+    <div class="container">
+      <h2>＊本について編集を加える！＊</h2>
+    </div>
   
-<%= form_for (@book)  do |f| %>
-
- <div class="tag-field", id='tag-field'>
+  <%# 本情報入力 %>
+ <%= form_for (@book)  do |f| %>
+   <div class="tag-field", id='tag-field'>
      <%= f.label :tag_name, "タグ" %>
      <%= f.text_field :tag_name, placeholder: "検索されやすいキーワードを入れましょう" %>
    </div>
@@ -34,10 +34,12 @@
   <div class="actions">
     <%= f.submit "更新", class: "btn1" %>
   </div>
-<% end %>
+ <% end %>
+  <%# 本情報入力 %>
 
-<%# ホームボタン %>
+
+ <%# ホームボタン %>
   <%= render "shared/sidebar" %>
+ <%# ホームボタン %>
 
-</div>
-</body>
+</html>

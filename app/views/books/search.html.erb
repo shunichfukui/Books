@@ -1,43 +1,42 @@
+  <%# タイトル %>
    <h1 class="search-forms">
      検索結果
    </h1>
+  <%# タイトル %>
+
+
 <head class ="search-book-list">
-  <div class="book-chosen">
   <%# 検索該当商品一覧 %>
    <% if @results.length !=0 %>    
-    <% @results.each do |result| %>
-     <br>
+     <% @results.each do |result| %>
      <div class="sec1title">
-    <div class="item-show">
+      <div class="item-show">
           <h2 class='border01'>
             <%= result.genre.type %>
-             <%= link_to "/books/#{result.id}" do %>
-        <%end %>
+            <%= link_to "/books/#{result.id}" do %>
+            <%end %>
           </h2>
         <%= image_tag result.image, id: 'slideshow' if result.image.attached? %>
         <div class="item-info" >
           <h2 id ='item-name'>
             <%= result.name %>
           </h2>
-            <form class="item-content-show">
+          <form class="item-content-show">
             <%= result.content %>
-            </form>
+          </form>
         </div>
         <br />
-       </div>
-     </div>
     <% end %>
    <% else %>
-    <br/>
+
+ <div>
    該当する商品はありません
-   <br/>
-   <br/>
-<div>
-   <%=link_to  "ホームへ戻る",root_path%>
-</div>
+
+   <%=link_to  "ホームへ戻る",root_path ,class:"home-btn"%>
+
+ </div>
+
    <% end %>
-   <br>
-  </div>
   
 <%# ホームボタン %>
    <%= render "shared/sidebar" %>

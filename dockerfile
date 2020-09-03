@@ -1,16 +1,18 @@
-    FROM ruby:2.6.5
-    RUN apt-get update && \
-        apt-get install -y mysql-client nodejs --no-install-recommends && \
-        rm -rf /var/lib/apt/lists/*
+FROM ruby:2.6.6
 
-    RUN mkdir /Books
+RUN apt-get update -qq && \
+    apt-get install -y build-essential \ 
+                       libpq-dev \        
+                       nodejs      
 
-    WORKDIR /Books
+RUN mkdir /Books 
 
-    ADD Gemfile /Books/Gemfile
-    ADD Gemfile.lock /Books/Gemfile.lock
+ENV APP_ROOT /Books 
+WORKDIR $APP_ROOT
 
-    RUN gem install bundler
-    RUN bundle install
+ADD ./Gemfile $APP_ROOT/Gemfile
+ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
 
-    ADD . /Books
+RUN gem install bundler 
+RUN bundle install
+ADD . $APP_ROOT

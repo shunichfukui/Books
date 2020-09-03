@@ -1,56 +1,18 @@
-# #docker-composeのバージョン
-# version: '1.27.0'
+version: '3'
+services:
+  db:
+    image: mysql2:0.4.4
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - "4306:3306"
 
-# #ここにdocker-composeコマンドで起動するコンテナとその設定を記載する
-# services:
-
-#   #コンテナ名
-#   db:
-#     #以下、コンテナ内で使用する設定
-
-#     #使用するdocker image
-#     image: mysql:14.14
-
-#     #環境変数
-#     environment:
-#       - MYSQL_DATABASE=xxxxx
-#       - MYSQL_USER= xxxxx
-#       - MYSQL_PASSWORD= xxxxx
-#       - MYSQL_ROOT_PASSWORD= xxxxx
-
-#     #コンテナがマウントするディレクトリ
-#     #mysqlのファイルをローカルディレクトリに保存するようにしている
-#     #これを記載しないとコンテナを落とす度にデータが初期化されるので注意
-#     volumes:
-#       - ./mysql/volumes:/var/lib/mysql
-#       - ./mysql/conf:/etc/mysql/conf.d
-
-#     #使用するポート番号
-#     ports:
-#       - "3306:3306"
-
-#   #コンテナ名(rails用のコンテナ)
-#   application:
-#     #既存のdocker imageではなく、dockerfileを元にbuildする
-#     build:
-#       context: .
-#       #imageをbuildする際に使用するdockerfile
-#       dockerfile: Dockerfile-rails
-
-#     environment:
-#       RAILS_ENV: development
-
-#     #起動時に実行するコマンド
-#     #ここでは起動時にrailsサーバーを立ち上げている      
-#     command: bundle exec rails s -p 3000 -b '0.0.0.0'
-
-#     #dockerと同階層に既存のrailsプロジェクトが展開されているため、それを参照する設定
-#     volumes:
-#       - .:/application
-#     ports:
-#       - "3000:3000"
-
-#     #このコンテナが依存するコンテナ
-#     #railsでmysqlを使用するためdbコンテナを参照する
-#     depends_on:
-#       - db
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/app_name
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db

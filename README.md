@@ -130,3 +130,5 @@ https://qiita.com/shunichfukui
 Ruby  6.0.0
 maysql
 Heroku
+AWS
+http://54.249.219.192:3000/

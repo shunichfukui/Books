@@ -4,36 +4,35 @@
     </div>
   
   <%# 本情報入力 %>
- <%= form_for (@book)  do |f| %>
-   <div class="tag-field", id='tag-field'>
-     <%= f.label :tag_name, "タグ" %>
-     <%= f.text_field :tag_name, placeholder: "検索されやすいキーワードを入れましょう" %>
-   </div>
-  <div class="field" type="text">
-    <%= f.label :name, "本の名前" %><br />
-    <%= f.text_field :name %>
-  </div>
-  
-   <div class="genre" >
-    <%= f.label :genre_id, "本のジャンル" %><br />
-    <%= f.collection_select(:genre_id,Genre.all,:id,:type,{prompt: "---"},{class:"select-box"}) %>
-  </div>
-  <div class="form-input">
-   <div class="text-image-content">
-     <%= f.label :content, "説明文" %><br />
-  <%= f.text_area :content, placeholder: "話したい内容について、ご自由にお書きください" , rows: "12" %> 
-  </div>
-  <br /><br /> 
-    <label class="form-image">
-      <span class="image-file">画像</span>
-      <%= f.file_field :image %>
-    </label>
-    <div class="image-stage", id="image-list"></div>
-  </div>
+<%= form_for @book, url:  books_path do |f| %>
 
-  <div class="actions">
-    <%= f.submit "更新", class: "btn1" %>
-  </div>
+    <div class="field" type="text">
+      <%= f.label :name, "タイトル（人が集まるような）" %><br />
+      <%= f.text_field :name %>
+    </div>
+    <div class="tag-field", id='tag-field'>
+      <%= f.label :tag_name, "タグ" %>
+      <%= f.text_field :tag_name, placeholder: "検索されやすいキーワードを入れましょう" %>
+    </div>
+    <div class="form-input">
+    <div class="text-image-content">
+      <%= f.label :content, "説明文" %><br />
+    <%= f.text_area :content, placeholder: "話したい内容について、ご自由にお書きください" , rows: "12" %> 
+    </div>
+    <div class="genre" >
+      <%= f.label :genre_id, "本のジャンル" %><br />
+      <%= f.collection_select(:genre_id,Genre.all,:id,:type,{prompt: "---"},{class:"select-box"}) %>
+    </div>
+    <br /><br /> 
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <%= f.file_field :image %>
+      </label>
+      <div class="image-stage", id="image-list"></div>
+    </div>
+    <div class="actions">
+      <%= f.submit "投稿する", class: "btn1" %>
+    </div>
  <% end %>
   <%# 本情報入力 %>
 

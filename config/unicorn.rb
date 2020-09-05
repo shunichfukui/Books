@@ -14,7 +14,7 @@ listen "#{app_path}/shared/tmp/sockets/unicorn.sock"
 pid "#{app_path}/shared/tmp/pids/unicorn.pid"
 
 # 「shared」の中を参照するよう変更
-stderr_path "#{app_path}/shared/log/unicorn.stderr.log"
+stderr_path "#{app_path}/log/unicorn.stderr.log"
 
 # 「shared」の中を参照するよう変更
 stdout_path "#{app_path}/shared/log/unicorn.stdout.log"

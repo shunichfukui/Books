@@ -22,6 +22,8 @@
 
 URL https://books-28291.herokuapp.com/
 
+Docker pull  コマンド
+docker pull fukusyun/books-28291fukusyun
 
 テスト用アカウント
 
@@ -131,4 +133,4 @@ Ruby  6.0.0
 maysql
 Heroku
 AWS
-http://54.249.219.192:3000/
+http://54.249.219.192/

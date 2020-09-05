@@ -1,9 +1,11 @@
 version: '3'
 services:
   db:
-    image: mysql2:0.4.4
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: example
+    image: mysql
     ports:
       - "4306:3306"
 
@@ -11,7 +13,7 @@ services:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
-      - .:/app_name
+      - .:/Books
     ports:
       - "3000:3000"
     depends_on:

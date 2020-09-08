@@ -39,7 +39,6 @@ class BooksController < ApplicationController
   end
   def edit
     @book = Book.find(params[:id])
-    redirect_to root_path
   end
 
   def update

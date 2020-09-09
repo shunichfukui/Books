@@ -1,4 +1,3 @@
-#サーバ上でのアプリケーションコードが設置されているディレクトリを変数に入れておく
 app_path = File.expand_path('../../../', __FILE__)
 
 #アプリケーションサーバの性能を決定する
@@ -14,7 +13,7 @@ listen "#{app_path}/shared/tmp/sockets/unicorn.sock"
 pid "#{app_path}/shared/tmp/pids/unicorn.pid"
 
 # 「shared」の中を参照するよう変更
-stderr_path "#{app_path}/log/unicorn.stderr.log"
+stderr_path "#{app_path}/shared/log/unicorn.stderr.log"
 
 # 「shared」の中を参照するよう変更
 stdout_path "#{app_path}/shared/log/unicorn.stdout.log"

@@ -147,7 +147,7 @@ Rspecによる自動テスト機能
 
 
 
-データベース設計
+<h1>データベース設計</h1>
 
 <img width="582" alt="c8a124a73143ed4edee782dda9d653e5" src="https://user-images.githubusercontent.com/68207981/92671295-d3871500-f350-11ea-993b-f512d3ade666.png">
 
@@ -157,9 +157,11 @@ Qiitaにて機能実装のための説明しています。
 https://qiita.com/shunichfukui
 
 
-#　使用技術
+<h1>使用技術</h1>
 -Ruby  2.6.5
+
 -Ruby on rails 6.0.0
+
 -Sass, Bootstrap, jQuery
 
 -Rspec

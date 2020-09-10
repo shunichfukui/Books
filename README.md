@@ -94,7 +94,10 @@ https://gyazo.com/7de4b6ae68784b157766d588752474be
 ・本出品、本詳細、メッセージ投稿、本編集、本削除
 
 ・CSS アニメーション使用
-https://gyazo.com/bf769d2968de3225e3b9bd0b0823eac3
+
+![画像](https://gyazo.com/bf769d2968de3225e3b9bd0b0823eac3)
+
+
 
 https://gyazo.com/c3d820835ca6f2ac7d4ef475c9a87cdc
 
@@ -145,9 +148,8 @@ Rspecによる自動テスト機能
 
 
 データベース設計
-https://gyazo.com/c8a124a73143ed4edee782dda9d653e5
 
-
+![画像](https://gyazo.com/c8a124a73143ed4edee782dda9d653e5)
 
 
 Qiitaにて機能実装のための説明しています。

@@ -29,8 +29,7 @@
 
 URL https://books-28291.herokuapp.com/
 
-Docker pull  コマンド
-docker pull fukusyun/books-28291fukusyun
+
 
 <h2>テスト用アカウント</h2>
 
@@ -59,20 +58,25 @@ docker pull fukusyun/books-28291fukusyun
 ・ユーザー管理機能
 目的　名前がある状態での交流を可能にし、
 ユーザー同士に親近感を生み出すため
+<br/>
 
 ・本の出品、削除、編集機能
 目的　一人ひとりがプラットフォームを作成し、
 ユーザー同士の交流を深めるため
+<br/>
 
-・スライダー機能
+・ページネーション機能
 目的　本を見やすくするため
+<br/>
 
 ・検索機能
 目的　時間短縮のため
 ユーザーのストレス緩和
+<br/>
 
 ・チャットボット
 目的　バグ対応
+<br/>
 
 ・お気に入り機能
 目的　評価のため
@@ -89,9 +93,8 @@ docker pull fukusyun/books-28291fukusyun
 ![画像](https://gyazo.com/0c80d9681b9fdc1bbf790f451a81fb59)
 ![画像](https://gyazo.com/ea472f67b52e5d69c57f0166cb3f415e)
 ![画像](https://gyazo.com/7de4b6ae68784b157766d588752474be)
-
-
-
+<br/>
+![bf769d2968de3225e3b9bd0b0823eac3](https://user-images.githubusercontent.com/68207981/92682825-4356c900-f36c-11ea-8eef-f947a3e8f299.gif)
 
 本関連　
 ・本出品、本詳細、メッセージ投稿、本編集、本削除
@@ -100,18 +103,21 @@ docker pull fukusyun/books-28291fukusyun
 
 ![画像](https://gyazo.com/bf769d2968de3225e3b9bd0b0823eac3)
 ![画像](https://gyazo.com/c3d820835ca6f2ac7d4ef475c9a87cdc)
+<br/>
 
 
 検索機能
 ・ランサック使用
 ・タグでの検索
 ![画像](https://gyazo.com/93c65acd627dad94fa4d426f374483dd)
+<br/>
 
 
 メッセージ機能
 
 ・コメント表示、コメント投稿、コメント削除機能
 ![画像](https://gyazo.com/f4c742159727ddc7b48ed36ba45451e3)
+<br/>
 
 スライドショー
 
@@ -136,16 +142,17 @@ Rspecによる自動テスト機能
 
 ・単体テスト機能
 ・統合テスト機能
+<br/>
 
 
 その他機能?
-・アマゾン移行
+・アマゾンのサイトへの移行
 ・簡易チャットボット
 ・Books紹介文のフェイドイン
 
 <h1>実装予定の機能</h1>
 
-・アマゾンか、楽天APIを用いて、検索機能
+・インクリメンタルサーチ機能
 
 
 
@@ -154,6 +161,7 @@ Rspecによる自動テスト機能
 <img width="582" alt="c8a124a73143ed4edee782dda9d653e5" src="https://user-images.githubusercontent.com/68207981/92671295-d3871500-f350-11ea-993b-f512d3ade666.png">
 
 
+<br/>
 
 Qiitaにて機能実装のための説明しています。
 https://qiita.com/shunichfukui

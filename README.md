@@ -149,7 +149,8 @@ Rspecによる自動テスト機能
 
 データベース設計
 
-![画像](https://gyazo.com/c8a124a73143ed4edee782dda9d653e5)
+<img width="582" alt="c8a124a73143ed4edee782dda9d653e5" src="https://user-images.githubusercontent.com/68207981/92671295-d3871500-f350-11ea-993b-f512d3ade666.png">
+
 
 
 Qiitaにて機能実装のための説明しています。

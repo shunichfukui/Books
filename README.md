@@ -1,15 +1,15 @@
-#アプリケーション名	
+#　アプリケーション名	
 
  Books
 
 
-#ローカルでの動作方法
+#　ローカルでの動作方法
 
 コマンド
 % git clone https://github.com/shunichfukui/Books.git
 
 
-#アプリケーション概要  
+#　アプリケーション概要  
 
 本好きの皆様へ、
 
@@ -39,14 +39,14 @@ docker pull fukusyun/books-28291fukusyun
 パスワード 11111a
 
 
-#利用方法
+#　利用方法
 
 気になる本を探し、
 その本のルーム内でやり取りをする
 実際に会いに行っても良い。
 
 
-#目指した課題解決
+#　目指した課題解決
 
 自分な好きな本について語りたいが、
 ピンポイントで同じ本が好き！
@@ -54,7 +54,7 @@ docker pull fukusyun/books-28291fukusyun
 と思ったので、同じ本好きの人が集まれるようにしました
 
 
-#洗い出した要件
+#　洗い出した要件
 
 ・ユーザー管理機能
 目的　名前がある状態での交流を可能にし、
@@ -78,7 +78,7 @@ docker pull fukusyun/books-28291fukusyun
 目的　評価のため
 
 
-#実装した機能についてのGIFと説明
+#　実装した機能についてのGIFと説明
 ユーザー管理機能
 
 ・divice使用
@@ -107,7 +107,7 @@ https://gyazo.com/93c65acd627dad94fa4d426f374483dd
 メッセージ機能
 
 ・コメント表示、コメント投稿、コメント削除機能
-[画像](https://gyazo.com/f4c742159727ddc7b48ed36ba45451e3)
+![画像](https://gyazo.com/f4c742159727ddc7b48ed36ba45451e3)
 
 スライドショー
 
@@ -154,7 +154,7 @@ Qiitaにて機能実装のための説明しています。
 https://qiita.com/shunichfukui
 
 
-#使用技術
+#　使用技術
 -Ruby  2.6.5
 -Ruby on rails 6.0.0
 -Sass, Bootstrap, jQuery

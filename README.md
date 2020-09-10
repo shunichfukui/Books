@@ -90,7 +90,7 @@ URL https://books-28291.herokuapp.com/
 ・登録情報編集画面
 ・SNS認証につきましては、大変お手数ですが下の黒丸にカーソルを合わせると出てきます。
 ちょっとした驚きや、遊びゴゴロを大切にさせてもらいました。
-![画像](https://gyazo.com/0c80d9681b9fdc1bbf790f451a81fb59)
+![画像](manegment.mp4)
 ![画像](https://gyazo.com/ea472f67b52e5d69c57f0166cb3f415e)
 ![画像](https://gyazo.com/7de4b6ae68784b157766d588752474be)
 <br/>

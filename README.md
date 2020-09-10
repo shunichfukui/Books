@@ -6,8 +6,18 @@
 <h1>ローカルでの動作方法</h1>
 
 コマンド
-% git clone https://github.com/shunichfukui/Books.git
 
+% git  clone  https://github.com/shunichfukui/Books.git
+
+
+docker-compose up
+
+
+エラー時(大変お手数ですが、、)
+
+brew install yarn 
+
+yarn add webpack
 
 <h1>アプリケーション概要</h1>  
 
@@ -90,8 +100,8 @@ URL https://books-28291.herokuapp.com/
 ・登録情報編集画面
 ・SNS認証につきましては、大変お手数ですが下の黒丸にカーソルを合わせると出てきます。
 ちょっとした驚きや、遊びゴゴロを大切にさせてもらいました。
-![画像](manegment.mp4)
-![画像](https://gyazo.com/ea472f67b52e5d69c57f0166cb3f415e)
+![画像](https://gyazo.com/ebfd596cdad9e29d355f6188b0f26b2a)
+![demo](https://gyazo.com/ea472f67b52e5d69c57f0166cb3f415e/raw)
 ![画像](https://gyazo.com/7de4b6ae68784b157766d588752474be)
 <br/>
 ![bf769d2968de3225e3b9bd0b0823eac3](https://user-images.githubusercontent.com/68207981/92682825-4356c900-f36c-11ea-8eef-f947a3e8f299.gif)
@@ -153,7 +163,7 @@ Rspecによる自動テスト機能
 <h1>実装予定の機能</h1>
 
 ・インクリメンタルサーチ機能
-
+・アマゾンAPIを用いて本の検索ができるようにしたい
 
 
 <h1>データベース設計</h1>
@@ -163,7 +173,7 @@ Rspecによる自動テスト機能
 
 <br/>
 
-Qiitaにて機能実装のための説明しています。
+Qiitaにて機能実装のための説明させてもらってます。
 https://qiita.com/shunichfukui
 
 

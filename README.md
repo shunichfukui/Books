@@ -101,7 +101,7 @@ URL https://books-28291.herokuapp.com/
 ・SNS認証につきましては、大変お手数ですが下の黒丸にカーソルを合わせると出てきます。
 ちょっとした驚きや、遊びゴゴロを大切にさせてもらいました。
 
-![demo](https://gyazo.com/ea472f67b52e5d69c57f0166cb3f415e/raw)
+
 ![demo](https://gyazo.com/7de4b6ae68784b157766d588752474be/raw)
 <br/>
 
@@ -128,7 +128,7 @@ URL https://books-28291.herokuapp.com/
 
 <br/>
 
-スライドショー
+ページネーション機能
 
 ・kaminari使用
 ・Bootstrap使用
@@ -160,6 +160,7 @@ Rspecによる自動テスト機能
 
 <h1>実装予定の機能</h1>
 
+・CircleCIを取り入れる
 ・インクリメンタルサーチ機能
 ・アマゾンAPIを用いて本の検索ができるようにしたい
 

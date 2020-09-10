@@ -100,33 +100,32 @@ URL https://books-28291.herokuapp.com/
 ・登録情報編集画面
 ・SNS認証につきましては、大変お手数ですが下の黒丸にカーソルを合わせると出てきます。
 ちょっとした驚きや、遊びゴゴロを大切にさせてもらいました。
-![画像](https://gyazo.com/ebfd596cdad9e29d355f6188b0f26b2a)
+
 ![demo](https://gyazo.com/ea472f67b52e5d69c57f0166cb3f415e/raw)
-![画像](https://gyazo.com/7de4b6ae68784b157766d588752474be)
+![demo](https://gyazo.com/7de4b6ae68784b157766d588752474be/raw)
 <br/>
-![bf769d2968de3225e3b9bd0b0823eac3](https://user-images.githubusercontent.com/68207981/92682825-4356c900-f36c-11ea-8eef-f947a3e8f299.gif)
+
 
 本関連　
 ・本出品、本詳細、メッセージ投稿、本編集、本削除
 
 ・CSS アニメーション使用
 
-![画像](https://gyazo.com/bf769d2968de3225e3b9bd0b0823eac3)
-![画像](https://gyazo.com/c3d820835ca6f2ac7d4ef475c9a87cdc)
+![画像](https://gyazo.com/cf8c430050e85d3a4af77cc4b846b4e3/raw)
 <br/>
 
 
 検索機能
 ・ランサック使用
 ・タグでの検索
-![画像](https://gyazo.com/93c65acd627dad94fa4d426f374483dd)
+
 <br/>
 
 
 メッセージ機能
 
 ・コメント表示、コメント投稿、コメント削除機能
-![画像](https://gyazo.com/f4c742159727ddc7b48ed36ba45451e3)
+
 <br/>
 
 スライドショー
@@ -134,18 +133,17 @@ URL https://books-28291.herokuapp.com/
 ・kaminari使用
 ・Bootstrap使用
 
-![画像](https://gyazo.com/b1ee2a16cf9421d6830efdcd535987e6)
+
 
 
 プレビュー機能
-
-![画像](https://gyazo.com/6b0e3656e7693b1bb81a5dd2ccbe4617)
+・アクティブストレージ使ってます。
 
 
 お気に入り機能
 
 ・Ajaxを使用
-![画像](https://gyazo.com/6f337384f5982cb6b4632aa6dd658dc7)
+![画像](https://gyazo.com/6f337384f5982cb6b4632aa6dd658dc7/raw)
 
 
 Rspecによる自動テスト機能

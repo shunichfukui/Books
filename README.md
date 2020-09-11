@@ -155,12 +155,15 @@ Rspecによる自動テスト機能
 
 その他機能?
 ・アマゾンのサイトへの移行
-・簡易チャットボット
 ・Books紹介文のフェイドイン
+
+・簡易チャットボット
+GitHubはこちら！
+https://github.com/shunichfukui/chat
 
 <h1>実装予定の機能</h1>
 
-・CircleCIを取り入れる
+・CircleCI自動化項目追加
 ・インクリメンタルサーチ機能
 ・アマゾンAPIを用いて本の検索ができるようにしたい
 
@@ -191,6 +194,9 @@ https://qiita.com/shunichfukui
 https://books-28291.herokuapp.com/
 
 -Docker,Docker-compose
+
+-CircleCI
+circleci local execute
 
 -AWS
 http://54.249.219.192/

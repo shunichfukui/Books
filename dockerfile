@@ -1,6 +1,5 @@
-FROM ruby:2.6
+FROM ruby:2.6.5
 
-# APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list

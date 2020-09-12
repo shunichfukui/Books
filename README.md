@@ -173,7 +173,9 @@ https://qiita.com/shunichfukui
 
 -Ruby on rails 6.0.0
 
--Sass, Bootstrap, jQuery
+-Sass, Bootstrap, jQuery,Ajax
+
+-Capistrano,Unicorn,Nginx
 
 -Rspec
 

@@ -11,6 +11,8 @@ services:
       - mysql-data:/var/lib/mysql
   web:
     build: .
+    environment:
+      DATABASE_PASSWORD: example
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/Books

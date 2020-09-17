@@ -11,6 +11,13 @@ class User < ApplicationRecord
          has_many :favorite_books, through: :favorites, source: :book  
         
          validates :nickname ,presence: true
+
+         def self.guest
+          find_or_create_by!(email: 'guest@example.com', nickname: 'maikeru') do |user|
+            user.password = SecureRandom.urlsafe_base64
+          end
+        end
+
          def self.from_omniauth(auth)
           sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
           user = User.where(email: auth.info.email).first_or_initialize(

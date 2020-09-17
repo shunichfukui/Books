@@ -46,7 +46,13 @@ class BooksController < ApplicationController
     book.update(book_params)
     redirect_to root_path
   end
-
+  def new_guest
+    user = User.find_or_create_by!(email: 'guest@example.com', nickname: 'maikeru') do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
+    sign_in user
+    redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
+  end
   private
   def book_params
     params.require(:book).permit(:name, :content,:genre_id,:image,:tag_name).merge(user_id: current_user.id)

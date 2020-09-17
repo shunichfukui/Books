@@ -6,7 +6,5 @@
     <% else %>
    <%= link_to "💖 #{book.favorites.count}", book_favorites_path(book.id), method: :post, class: 'btn btn-default', remote: true %>   
    <% end %>
-  <% else %>
-    <button><span>お気に入り数: </span><%= book.favorites.count %>
   <% end %>
 </div>

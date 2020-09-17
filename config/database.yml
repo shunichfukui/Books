@@ -1,4 +1,3 @@
-
 default: &default
   adapter: mysql2
   encoding: utf8
@@ -20,7 +19,7 @@ test:
 production:
   <<: *default
   database: Books_production
-  
+
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  # socket: /var/lib/mysql/mysql.sock
+  socket: /var/lib/mysql/mysql.sock

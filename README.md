@@ -1,41 +1,29 @@
-<h1>アプリケーション名</h1>	
+<h1>アプリケーション名</h1>
 
- Books
-
+Books
 
 <h1>ローカルでの動作方法</h1>
 
 コマンド
 
-% git  clone  https://github.com/shunichfukui/Books.git
-
+% git clone https://github.com/shunichfukui/Books.git
 
 docker-compose up
 
-
 エラー時(大変お手数ですが、、)
 
-brew install yarn 
+brew install yarn
 
 yarn add webpack
 
-<h1>アプリケーション概要</h1>  
+<h1>アプリケーション概要</h1>
 
 本好きな方のために
 好きな本について語り合う仲間をつくりたいという願いをもとに、
+
 <h2>本特化型SNS</h2>をテーマにして、それに適したプラットフォームを作りました。
 
-
 URL https://books-28291.herokuapp.com/
-
-
-
-<h2>テスト用アカウント</h2>
-
-ニックネーム　サンプル
-メールアドレス　sanple@gmail.com
-パスワード 11111a
-
 
 <h1>利用方法</h1>
 
@@ -43,14 +31,12 @@ URL https://books-28291.herokuapp.com/
 その本のルーム内でやり取りをする
 実際に会いに行っても良い。
 
-
 <h1>目指した課題解決</h1>
 
 自分な好きな本について語りたいが、
 ピンポイントで同じ本が好き！
 という人がいることがあまりない
 と思ったので、同じ本好きの人が集まれるようにしました
-
 
 <h1>洗い出した要件</h1>
 
@@ -80,20 +66,17 @@ URL https://books-28291.herokuapp.com/
 ・お気に入り機能
 目的　評価のため
 
-
 <h1>実装した機能についてのGIFと説明</h1>
 ユーザー管理機能
 
-・divice使用
-・新規登録、ログイン、ログアウト、SNS認証
+・divice 使用
+・新規登録、ログイン、ログアウト、SNS 認証
 ・登録情報編集画面
-・SNS認証につきましては、大変お手数ですが下の黒丸にカーソルを合わせると出てきます。
+・SNS 認証につきましては、大変お手数ですが下の黒丸にカーソルを合わせると出てきます。
 ちょっとした驚きや、遊びゴゴロを大切にさせてもらいました。
-
 
 ![demo](https://gyazo.com/7de4b6ae68784b157766d588752474be/raw)
 <br/>
-
 
 本関連　
 ・本出品、本詳細、メッセージ投稿、本編集、本削除
@@ -103,13 +86,11 @@ URL https://books-28291.herokuapp.com/
 ![画像](https://gyazo.com/cf8c430050e85d3a4af77cc4b846b4e3/raw)
 <br/>
 
-
 検索機能
 ・ランサック使用
 ・タグでの検索
 
 <br/>
-
 
 メッセージ機能
 
@@ -119,54 +100,45 @@ URL https://books-28291.herokuapp.com/
 
 ページネーション機能
 
-・kaminari使用
-・Bootstrap使用
-
-
-
+・kaminari 使用
+・Bootstrap 使用
 
 プレビュー機能
 ・アクティブストレージ使ってます。
 
-
 お気に入り機能
 
-・Ajaxを使用
+・Ajax を使用
 ![画像](https://gyazo.com/6f337384f5982cb6b4632aa6dd658dc7/raw)
 
-
-Rspecによる自動テスト機能
+Rspec による自動テスト機能
 
 ・単体テスト機能
 ・統合テスト機能
 <br/>
 
-
 その他機能?
 ・アマゾンのサイトへの移行
-・Books紹介文のフェイドイン
+・Books 紹介文のフェイドイン
 
 ・簡易チャットボット
-GitHubはこちら！
+GitHub はこちら！
 https://github.com/shunichfukui/chat
 
 <h1>実装予定の機能</h1>
 
-・CircleCI自動化項目追加
+・CircleCI 自動化項目追加
 ・インクリメンタルサーチ機能
-・アマゾンAPIを用いて本の検索ができるようにしたい
-
+・アマゾン API を用いて本の検索ができるようにしたい
 
 <h1>データベース設計</h1>
 
 <img width="582" alt="c8a124a73143ed4edee782dda9d653e5" src="https://user-images.githubusercontent.com/68207981/92671295-d3871500-f350-11ea-993b-f512d3ade666.png">
 
-
 <br/>
 
-Qiitaにて機能実装のための説明させてもらってます。
+Qiita にて機能実装のための説明させてもらってます。
 https://qiita.com/shunichfukui
-
 
 <h1>使用技術</h1>
 -Ruby  2.6.5
@@ -181,7 +153,7 @@ https://qiita.com/shunichfukui
 
 -mysql 5.6.47
 
--Heroku 
+-Heroku
 https://books-28291.herokuapp.com/
 
 -Docker,Docker-compose

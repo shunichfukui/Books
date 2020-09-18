@@ -2,9 +2,9 @@
 <div class="favorite-button">
  <% if user_signed_in? %>
   <% if book.favorited_by?(current_user) %>
-   <%=link_to "💔 #{book.favorites.count}",book_favorites_path(book.id), method: :delete, class: 'btn btn-default', remote: true %>
+   <%=link_to "💖 #{book.favorites.count}",book_favorites_path(book.id), method: :delete, class: 'btn btn-default', remote: true %>
     <% else %>
-   <%= link_to "💖 #{book.favorites.count}", book_favorites_path(book.id), method: :post, class: 'btn btn-default', remote: true %>   
+   <%= link_to "♡ #{book.favorites.count}", book_favorites_path(book.id), method: :post, class: 'btn btn-default', remote: true %>   
    <% end %>
   <% end %>
 </div>

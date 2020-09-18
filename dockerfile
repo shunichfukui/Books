@@ -12,6 +12,10 @@ COPY Gemfile.lock ./Gemfile.lock
 RUN gem install bundler
 RUN bundle install
 COPY . /Books/
+# waitライブラリの追加
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.6.0/wait /wait 
+# ライブラリの権限変更
+RUN chmod +x /wait
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/

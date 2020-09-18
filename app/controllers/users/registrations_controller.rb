@@ -22,7 +22,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super
   end
   def check_guest
-    if resource.email == 'guest@example.com' && resource.nickname == 'maikeru'
+    if resource.email == 'test@example.com' && resource.nickname == 'テスト'
       redirect_to root_path, alert: 'ゲストユーザーは削除できません。'
     end
   end

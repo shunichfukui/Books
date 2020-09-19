@@ -89,7 +89,6 @@ URL https://books-28291.herokuapp.com/
 
 ・CSS アニメーション使用
 
-![画像](https://gyazo.com/cf8c430050e85d3a4af77cc4b846b4e3/raw)
 <br/>
 
 検索機能

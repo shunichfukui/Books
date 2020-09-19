@@ -101,7 +101,7 @@ URL https://books-28291.herokuapp.com/
 メッセージ機能
 
 ・コメント表示、コメント投稿、コメント削除機能
-
+![demo](https://gyazo.com/60210918eca2de2f61c03a3c39877dad/raw)
 <br/>
 
 ページネーション機能
@@ -113,7 +113,7 @@ URL https://books-28291.herokuapp.com/
 ・アクティブストレージ使ってます。
 
 お気に入り機能
-
+・一覧画面もあります
 ・Ajax を使用
 ![画像](https://gyazo.com/6f337384f5982cb6b4632aa6dd658dc7/raw)
 

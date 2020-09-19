@@ -16,7 +16,9 @@
             <%= link_to "/books/#{result.id}" do %>
             <%end %>
           </h2>
-        <%= image_tag result.image, id: 'slideshow' if result.image.attached? %>
+          <%= link_to "/books/#{result.id}" do %>
+            <%= image_tag result.image, id: 'slideshow' if result.image.attached? %>
+          <% end %>
         <div class="item-info" >
           <h2 id ='item-name'>
             <%= result.name %>

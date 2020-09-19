@@ -114,7 +114,7 @@ URL https://books-28291.herokuapp.com/
 お気に入り機能
 ・一覧画面もあります
 ・Ajax を使用
-![画像](https://gyazo.com/6f337384f5982cb6b4632aa6dd658dc7/raw)
+![画像](https://gyazo.com/eff5718bc51c28304e728477650814af/raw)
 
 Rspec による自動テスト機能
 

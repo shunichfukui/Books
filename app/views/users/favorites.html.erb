@@ -16,7 +16,9 @@
             <%= link_to "/books/#{favorite.id}" do %>
             <%end %>
           </h2>
-        <%= image_tag favorite.book.image, id: 'slideshow' if favorite.book.image.attached? %>
+            <%= link_to "/books/#{favorite.book.id}" do %>
+              <%= image_tag favorite.book.image, id: 'slideshow' if favorite.book.image.attached? %>
+            <% end %>
         <div class="item-info" >
           <h2 id ='item-name'>
             <%= favorite.book.name %>

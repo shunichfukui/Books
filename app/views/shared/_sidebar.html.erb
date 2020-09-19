@@ -9,6 +9,7 @@
         <li class ="btn5"> <%= link_to "マイページ",  edit_user_registration_path %></li><br/>
        <li class ="btn5"> <%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li><br/>
        <li class ="btn5"> <%= link_to "さっそく投稿する！", new_book_path %></li>
+       <li class ="btn5"> <%= link_to "いいね一覧！", favorites_users_path %></li>
       <% else %>
        <li class ="btn5"> <%= link_to "新規登録", new_user_registration_path %></li>
        <li class ="btn5"> <%= link_to "ログイン", new_user_session_path %></li>

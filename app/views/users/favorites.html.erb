@@ -1,0 +1,44 @@
+  <%# タイトル %>
+   <h1 class="search-forms">
+     あなたがした、いいね一覧
+   </h1>
+  <%# タイトル ？%>
+
+<%# Search画面と同じ内容 %>
+<head class ="search-book-list">
+  <%# いいねした商品一覧 %>
+   <% if @favorite.length !=0 %>    
+     <% @favorites.each do |favorite| %>
+     <div class="sec1title">
+      <div class="item-show">
+          <h2 class='border01'>
+            <%= favorite.book.genre.type %>
+            <%= link_to "/books/#{favorite.id}" do %>
+            <%end %>
+          </h2>
+        <%= image_tag favorite.book.image, id: 'slideshow' if favorite.book.image.attached? %>
+        <div class="item-info" >
+          <h2 id ='item-name'>
+            <%= favorite.book.name %>
+          </h2>
+          <form class="item-content-show">
+            <%= favorite.book.content %>
+          </form>
+        </div>
+        <br />
+    <% end %>
+   <% else %>
+
+ <div>
+   該当する商品はありません
+
+   <%=link_to  "ホームへ戻る",root_path ,class:"home-btn"%>
+
+ </div>
+
+   <% end %>
+  
+<%# ホームボタン %>
+   <%= render "shared/home" %>
+
+ </head>

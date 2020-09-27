@@ -71,6 +71,12 @@ URL https://books-28291.herokuapp.com/
 ・お気に入り機能（ログイン時のみ）
 
 目的　評価のため
+<br/>
+
+・SNS シェア機能(Twitter,Facebook)
+
+目的　 URL やハッシュタグをつけ認知度拡大を図っている
+<br/>
 
 <h1>実装した機能についてのGIFと説明</h1>
 ユーザー管理機能

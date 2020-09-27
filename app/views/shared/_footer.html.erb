@@ -4,21 +4,21 @@
 <div id="container">
 <div id="cont">
 <div class="footer_center">
-    <% if user_signed_in?%>
-      <%# ログインしていない場合 %>
-  <h2>
-  <%= link_to 'Facebookでサインイン', user_facebook_omniauth_authorize_path, method: :post,class: "Editlink1" %>
-  </h2>
-  <h2>
-  <%= link_to 'Googleでサインイン', user_google_oauth2_omniauth_authorize_path, method: :post,class: "Editlink2"%>
-   </h2>
+  <% if user_signed_in?%>
+  <%# ログインしていない場合 %>
+      <h2>
+      <%= link_to 'Twitterでこのアプリをシェア', "https://twitter.com/intent/tweet?hashtags=本共有アプリBooks,本好きの人と繋がりたいintent/tweet?url=https://books-28291.herokuapp.com", title: 'Twitter', target: '_blank' %>
+      </h2>
+    <% else %>
+  <%# ログインしている時 %>
+      <h2>
+        <%= link_to 'Facebookでサインイン', user_facebook_omniauth_authorize_path, method: :post,class: "Editlink1" %>
+      </h2>
+      <h2>
+        <%= link_to 'Googleでサインイン', user_google_oauth2_omniauth_authorize_path, method: :post,class: "Editlink2"%>
+      </h2>
+  <% end %>
 </div>
-      <% else %>
-      <%# ログインしている時 %>
-    <h2>
-    <%= link_to 'Twitterでこのアプリをシェア', "https://twitter.com/intent/tweet?hashtags=本共有アプリBooks,本好きの人と繋がりたいintent/tweet?url=https://books-28291.herokuapp.com", title: 'Twitter', target: '_blank' %>
-    </h2>
-      <% end %>
 </div>
 </div>
 </div>

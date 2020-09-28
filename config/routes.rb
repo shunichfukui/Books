@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root to: "books#index"
   post 'books/messages'
+  get 'books/amazon'
   resources :books do
     resources :messages,only: [:create, :new,:index,:show]
     resource :favorites, only: [:create, :destroy  ]

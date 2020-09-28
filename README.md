@@ -100,6 +100,7 @@ URL https://books-28291.herokuapp.com/
 検索機能
 ・ランサック使用
 ・タグでの検索
+・アマゾンでの検索機能もあり。
 
 <br/>
 
@@ -129,7 +130,6 @@ Rspec による自動テスト機能
 <br/>
 
 その他機能?
-・アマゾンのサイトへの移行
 ・Books 紹介文のフェイドイン
 
 ・簡易チャットボット
@@ -156,7 +156,7 @@ https://qiita.com/shunichfukui
 
 -Ruby on rails 6.0.0
 
--Sass, Bootstrap, jQuery,Ajax
+-Sass, Bootstrap, jQuery, Ajax, amazon アソシエイト
 
 -Capistrano,Unicorn,Nginx
 

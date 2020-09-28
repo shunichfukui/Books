@@ -6,7 +6,7 @@ default: &default
   password: <%= ENV['DATABASE_PASSWORD'] %>
   # socket: /tmp/mysql.sock
 
-  host: db
+  host: localhost
 
 development:
   <<: *default
@@ -16,10 +16,9 @@ test:
   <<: *default
   database: Books_test
 
-production:
-  <<: *default
-  database: Books_production
-
-  username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /var/lib/mysql/mysql.sock
+  production:
+    <<: *default
+    database: Books_development
+    username: root
+    password: <%= ENV['DATABASE_PASSWORD'] %>
+    socket: /var/lib/mysql/mysql.sock
